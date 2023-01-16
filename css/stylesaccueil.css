@@ -1,0 +1,17 @@
+/*html{
+    font-size: 62.5%; pour utiliser les rem sur une base de 10px
+}*/
+a{
+    text-decoration: none;
+    color:black;
+}
+.title{
+    font-family: 'Shrikhand', cursive;
+}
+.text{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 100%;
+    margin: 0;
+}
