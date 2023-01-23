@@ -17,7 +17,7 @@
         <header>
             <a href="../index.html"><i class="fa-solid fa-arrow-left"></i>retour menu</a>
             <div>
-                <h1  id="logo"><img src="../images/logo/ohmyfood.png" alt="logo ohmyfood" id="logoOhmyfood"></h1>
+                <p  id="logo"><img src="../images/logo/ohmyfood.png" alt="logo ohmyfood" id="logoOhmyfood"></p>
             </div>
         </header>
         <main>
@@ -34,15 +34,15 @@
                     </figcaption>
                 </figure>
             </section>
-            <section>
+            <div class="menu_composition">
                 <form method="get" action="">
                     <fieldset>
                         <legend>ENTRÉES</legend>
                         <div class="plat entrees">
                             <label for="escargots">
-                                <div class="nom box_1">Fricassée d'escargots</div>
-                                <div class="detail box_2">Au piment d'Espelette</div>
-                                <div class="prix box_3">25€</div>
+                                <span class="nom box_1">Fricassée d'escargots</span>
+                                <span class="detail box_2">Au piment d'Espelette</span>
+                                <span class="prix box_3">25€</span>
                             </label>
                             <div class="btn_radio">
                                 <input type="radio" name="entrees" value="escargots" id="escargots">
@@ -50,9 +50,9 @@
                         </div>
                         <Div class="plat entrees">
                             <label for="foie-gras">
-                                <div class="nom box_1">Foie gras de canard mi-cuit</div>
-                                <div class="detail box_2">Et ses copeaux de truffe noire</div>
-                                <div class="prix box_3">35€</div>
+                                <span class="nom box_1">Foie gras de canard mi-cuit</span>
+                                <span class="detail box_2">Et ses copeaux de truffe noire</span>
+                                <span class="prix box_3">35€</span>
                             </label>
                             <div class="btn_radio">
                                 <input type="radio" name="entrees" value="foie-gras" id="foie-gras">
@@ -60,9 +60,9 @@
                         </Div>
                         <div class="plat entrees">
                             <label for="oeuf-plat">
-                                <div class="nom box_1">Oeuf au plat</div>
-                                <div class="detail box_2">Assaisonné à la truffe sur lit de caviar</div>
-                                <div class="prix box_3">20€</div>
+                                <span class="nom box_1">Oeuf au plat</span>
+                                <span class="detail box_2">Assaisonné à la truffe sur lit de caviar</span>
+                                <span class="prix box_3">20€</span>
                             </label>
                             <div class="btn_radio">
                                 <input type="radio" name="entrees" value="oeuf-plat" id="oeuf-plat">
@@ -73,9 +73,9 @@
                         <legend>PLATS</legend>
                         <div class="plat plats">
                             <label for="filet-boeuf">
-                                <div class="nom box_1">Filet de boeuf aux herbes</div>
-                                <div class="detail box_2">Accompagné de sa ribambelle de légumes</div>
-                                <div class="prix box_3">40€</div>
+                                <span class="nom box_1">Filet de boeuf aux herbes</span>
+                                <span class="detail box_2">Accompagné de sa ribambelle de légumes</span>
+                                <span class="prix box_3">40€</span>
                             </label>
                             <div class="btn_radio">
                                 <input type="radio" name="plats" value="filet-boeuf" id="filet-boeuf">
@@ -83,9 +83,9 @@
                         </div>
                         <div class="plat plats">
                             <label for="parmentier-queue">
-                                <div class="nom box_1">Parmentier de queue de boeuf</div>
-                                <div class="detail box_2">À la truffe noire sur sa purée de panais</div>
-                                <div class="prix box_3">35€</div>
+                                <span class="nom box_1">Parmentier de queue de boeuf</span>
+                                <span class="detail box_2">À la truffe noire sur sa purée de panais</span>
+                                <span class="prix box_3">35€</span>
                             </label>
                             <div class="btn_radio">
                                 <input type="radio" name="plats" value="parmentier-queue" id="parmentier-queue">
@@ -93,9 +93,9 @@
                         </div>
                         <div class="plat plats">
                             <label for="filet-turbot">
-                                <div class="nom box_1">Filet de turbot</div>
-                                <div class="detail box_2">Aux agrumes</div>
-                                <div class="prix box_3">44€</div>
+                                <span class="nom box_1">Filet de turbot</span>
+                                <span class="detail box_2">Aux agrumes</span>
+                                <span class="prix box_3">44€</span>
                             </label>
                             <div class="btn_radio">
                                 <input type="radio" name="plats" value="filet-turbot" id="filet-turbot">
@@ -106,9 +106,9 @@
                         <legend>DESSERTS</legend>
                         <div class="plat desserts">
                             <label for="paris-brest">
-                                <div class="nom box_1">Paris-Brest</div>
-                                <div class="detail box_2">Revisité</div>
-                                <div class="prix box_3">18€</div>
+                                <span class="nom box_1">Paris-Brest</span>
+                                <span class="detail box_2">Revisité</span>
+                                <span class="prix box_3">18€</span>
                             </label>
                             <div class="btn_radio">
                                 <input type="radio" name="desserts" value="paris-brest" id="paris-brest">
@@ -116,9 +116,9 @@
                         </div>
                         <div class="plat desserts">
                             <label for="macaron-chocolat">
-                                <div class="nom box_1">Macaron au chocolat d'exception</div>
-                                <div class="detail box_2">Et glace à la vanille de Madagascar</div>
-                                <div class="prix box_3">22€</div>
+                                <span class="nom box_1">Macaron au chocolat d'exception</span>
+                                <span class="detail box_2">Et glace à la vanille de Madagascar</span>
+                                <span class="prix box_3">22€</span>
                             </label>
                             <div class="btn_radio">
                                 <input type="radio" name="desserts" value="macaron-chocolat" id="macaron-chocolat">
@@ -126,9 +126,9 @@
                         </div>
                         <div class="plat desserts">
                             <label for="mousse-chocolat">
-                                <div class="nom box_1">Mousse au chocolat</div>
-                                <div class="detail box_2">Au piment d'Espelette et à la truffe noire</div>
-                                <div class="prix box_3">23€</div>
+                                <span class="nom box_1">Mousse au chocolat</span>
+                                <span class="detail box_2">Au piment d'Espelette et à la truffe noire</span>
+                                <span class="prix box_3">23€</span>
                             </label>
                             <div class="btn_radio">
                                 <input type="radio" name="desserts" value="mousse-chocolat" id="mousse-chocolat">
@@ -137,7 +137,7 @@
                     </fieldset>
                     <input type="submit" value="Commander">
                 </form>
-            </section>
+            </div>
         </main>
         <footer class="text">
             <h1><img src="../images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood"></h1>
@@ -148,5 +148,6 @@
                 <li><a href="mailto:#">Contact</a></li>
             </ul>
         </footer>
+    </div>
 </body>
 </html>
