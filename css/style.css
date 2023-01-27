@@ -1,15 +1,13 @@
-/*html{
-    font-size: 62.5%; pour utiliser les rem sur une base de 10px
+html{
+    font-family: 'Roboto', sans-serif;
+    /*font-size: 62.5%; pour utiliser les rem sur une base de 10px*/
 }*/
 a{
     text-decoration: none;
     color:black;
 }
-.title{
+.titles{
     font-family: 'Shrikhand', cursive;
-}
-.text{
-    font-family: 'Roboto', sans-serif;
 }
 .container{
     width: 100%;
