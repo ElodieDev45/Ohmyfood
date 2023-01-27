@@ -1,43 +1,50 @@
-.nav{
+nav{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     background-color: rgb(240, 240, 240);
-    .nav-local{
+
+    #localization{
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 0.3em;
         background-color: rgba(210, 210, 210);
         width: 100%;
         height: 3rem;
+        
         label{
             display: flex;
             gap: 1em;
             font-size: 1.2em;
             font-weight: bold;
         }
+        select {
+            appearance: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            background: none;
+        }
     }
-    .nav-title{
+    h1{
         width: 80%;
         font-size: 1.6em;
         text-align: center;
         margin: 1.5em 0 0.3em;
     }
-    .nav-pres{
+    h2{
         width: 95%;
         font-size: 1.1em;
         font-weight: 400;
         text-align:center;
         margin: 0.3em 0 1.5em;
     }
-    .nav-explore{
+    .nav__link{
         display: flex;
         align-items: center;
         height: 2em;
-        padding: 10px 20px;
         margin-bottom: 2.5em;
-        border: solid 1px grey;
-        border-radius: 100px;
     }
 }
