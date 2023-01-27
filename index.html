@@ -15,103 +15,104 @@
 <body>
     <div class="container">
         <header class="header">
-            <div class="header_logo">
-                <img  class="header-logo" src="images/logo/ohmyfood.png" alt="logo ohmyfood" id="logoOhmyfood">
+            <div class="header__logo">
+                <img src="images/logo/ohmyfood.png" alt="logo ohmyfood" id="logoOhmyfood">
             </div>
         </header>
         <main>
-            <nav class="nav">
-                <form id="localisation" class="nav-local">
-                    <label><i class="fa-solid fa-location-dot"></i>Paris, Belleville</label>
-                    <!-- <input type="text" name="city" id="city" placeholder="Paris, Belleville">
-                    <button type="button">Rechercher</button> -->
+            <nav>
+                <form id="localization">
+                    <label for="district"><i class="fa-solid fa-location-dot"></i>Paris,</label>
+                    <select name="district" id="district">
+                        <option value="Belleville" selected>Belleville</option>
+                    </select>
                 </form>
-                <h1 class="nav-title">Réservez le menu qui vous convient</h1>
-                <h2 class="nav-pres">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2>
-                <a class="nav-explore" href="#menus">Explorer nos restaurants</a>
+                <h1>Réservez le menu qui vous convient</h1>
+                <h2>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2>
+                <a class="nav__link btn" href="#restaurants">Explorer nos restaurants</a>
             </nav>
             <section id="fontionnement" class="funct">
-                <h2 class="funct-title">Fonctionnement</h2>
-                <ol class="funct-list">
-                    <li class="funct-list_btn"><i class="fa-solid fa-mobile-screen-button"></i>Choississez un Restaurant</li>
-                    <li class="funct-list_btn"><i class="fa-solid fa-list-ul"></i>Composez votre menu</li>
-                    <li class="funct-list_btn"><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
+                <h2>Fonctionnement</h2>
+                <ol class="funct__list">
+                    <li class="funct__list-btn"><i class="fa-solid fa-mobile-screen-button"></i>Choississez un Restaurant</li>
+                    <li class="funct__list-btn"><i class="fa-solid fa-list-ul"></i>Composez votre menu</li>
+                    <li class="funct__list-btn"><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
                 </ol>
             </section>
             <section id="restaurants" class="rest">
-                <h2 class="rest-title">Restaurants</h2>
-                <div class="rest-list">
-                    <article class="rest-frame">
+                <h2>Restaurants</h2>
+                <div class="rest__list">
+                    <article class="rest__frame">
                         <a href="./Menus/la_palette_du_gout.html">
                             <figure>
-                                <div class="rest-frame_new">Nouveau</div>
-                                <img class="rest-frame__picture" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                                <div class="rest__frame-new">Nouveau</div>
+                                <img class="rest__frame-picture" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant La palette du goût">
                                 <figcaption>
-                                    <div class="rest_details">
-                                        <h3 class="rest-frame__name">La palette du goût</h3>
-                                        <h4 class="rest-frame__focus">Ménilmontant</h4>
+                                    <div class="rest__frame-details">
+                                        <h3>La palette du goût</h3>
+                                        <h4>Ménilmontant</h4>
                                     </div>
                                 </figcaption>
                             </figure>
                         </a>
-                        <button type="button" class="rest-frame__fav">
+                        <button type="button" class="rest__frame-fav">
                             <span>
                                 <i class="fa-regular fa-heart">heart</i>
                             </span>
                         </button>
                     </article>
-                    <article class="rest-frame">
+                    <article class="rest__frame">
                         <a href="./Menus/la_note_enchantee.html">
                             <figure>
-                                <div class="rest-frame_new">Nouveau</div>
-                                <img class="rest-frame__picture" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant La note enchantée">
+                                <div class="rest__frame-new">Nouveau</div>
+                                <img class="rest__frame-picture" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant La note enchantée">
                                 <figcaption>
-                                    <div class="rest_details">
-                                        <h3 class="rest-frame__name">La note enchantée</h3>
-                                        <h4 class="rest-frame__focus">Charonne</h4>
+                                    <div class="rest__frame-details">
+                                        <h3>La note enchantée</h3>
+                                        <h4>Charonne</h4>
                                     </div>
                                 </figcaption>
                             </figure>
                         </a>
-                        <button type="button" class="rest-frame__fav">
+                        <button type="button" class="rest__frame-fav">
                             <span>
                                 <i class="fa-regular fa-heart">heart</i>
                             </span>
                         </button>
                     </article>
-                    <article class="rest-frame">
+                    <article class="rest__frame">
                         <a href="./Menus/a_la_francaise.html">
                             <figure>
-                                <div class="rest-frame_new">Nouveau</div>
-                                <img class="rest-frame__picture" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant À la française">
+                                <div class="rest__frame-new">Nouveau</div>
+                                <img class="rest__frame-picture" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant À la française">
                                 <figcaption>
-                                    <div class="rest_details">
-                                        <h3 class="rest-frame__name">À la française</h3>
-                                        <h4 class="rest-frame__focus">Cité Rouge</h4>
+                                    <div class="rest__frame-details">
+                                        <h3>À la française</h3>
+                                        <h4>Cité Rouge</h4>
                                     </div>
                                 </figcaption>
                             </figure>
                         </a>
-                        <button type="button" class="rest-frame__fav">
+                        <button type="button" class="rest__frame-fav">
                             <span>
                                 <i class="fa-regular fa-heart">heart</i>
                             </span>
                         </button>
                     </article>
-                    <article class="rest-frame">
+                    <article class="rest__frame">
                         <a href="./Menus/le_delice_des_sens.html">
                             <figure>
-                                <div class="rest-frame_new">Nouveau</div>
-                                <img class="rest-frame__picture" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant Le délice des sens">
+                                <div class="rest__frame-new">Nouveau</div>
+                                <img class="rest__frame-picture" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant Le délice des sens">
                                 <figcaption>
-                                    <div class="rest_details">
-                                        <h3 class="rest-frame__name">Le délice des sens</h3>
-                                        <h4 class="rest-frame__focus">Folie-Méricourt</h4>
+                                    <div class="rest__frame-details">
+                                        <h3>Le délice des sens</h3>
+                                        <h4>Folie-Méricourt</h4>
                                     </div>
                                 </figcaption>
                             </figure>
                         </a>
-                        <button type="button" class="rest-frame__fav">
+                        <button type="button" class="rest__frame-fav">
                             <span>
                                 <i class="fa-regular fa-heart">heart</i>
                             </span>
@@ -120,13 +121,13 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
-            <p class="footer-logo"><img src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood"></p>
-            <ul class="footer-list">
+        <footer>
+            <p><img src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood"></p>
+            <ul>
                 <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
                 <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
                 <li><a href="#">Mentions légales</a></li>
-                <li><a href="mailto:#">Contact</a></li>
+                <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
             </ul>
         </footer>
     </div>
