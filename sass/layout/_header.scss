@@ -1,5 +1,5 @@
 .header{
-    box-shadow: $shadow-2;
+    @include shadow-light;
     &__logo{
         width: 45%;
         margin: 0 auto;

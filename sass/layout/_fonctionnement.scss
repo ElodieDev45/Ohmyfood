@@ -20,14 +20,13 @@
         background-color: rgb(250, 250, 250);
         height: 4.5rem;
         border-radius: 1.5rem;
-        box-shadow: $shadow-1;
+        @include shadow-frame;
         margin-left: 1rem;
         font-weight: 600;
 
         span{
             display: flex;
-            justify-content: center ;
-            align-items: center;
+            @include flex-totaly-center;
             position: relative;
             left: -0.8rem;
             width: 1.5rem;

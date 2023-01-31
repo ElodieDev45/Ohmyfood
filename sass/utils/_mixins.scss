@@ -1,0 +1,11 @@
+@mixin shadow-frame{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
+}
+
+@mixin shadow-light{
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+@mixin flex-totaly-center{
+    justify-content: center ;
+    align-items: center;
+}

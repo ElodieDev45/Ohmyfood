@@ -7,8 +7,7 @@ nav{
 
     #localization{
         display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-totaly-center;
         gap: 0.3em;
         background-color: rgba(0, 0, 0, 0.04);
         width: 100%;
