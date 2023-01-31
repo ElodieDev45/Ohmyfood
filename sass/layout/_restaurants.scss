@@ -1,0 +1,76 @@
+.rest{
+    padding: 2rem 1.2rem 4rem;
+    background-color: rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        @include title-sections;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+    }
+    &__frame{
+        position: relative;
+        width: 100%;
+        @include shadow-frame;
+        border-radius: 1rem;
+
+        figure{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+        &-new{
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            background-color: $color-tertiary;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.3rem 0.5rem;
+            color: $color-tertiary-dark;
+
+            &--inactive{
+                display: none;
+            }
+        }   
+        &-picture{
+            width: 100%;
+            height: 11rem;
+            object-fit: cover;
+            object-position: bottom;
+            border-radius: 1rem 1rem 0 0;
+
+            &--vertical{
+                object-position: 0 62%;
+            }
+        }
+        &-details{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            h3{
+                margin: 1rem 1rem 0.1rem;
+            }
+            h4{
+                margin: 0.1rem 1rem 1rem;
+                font-weight: 300;
+            }
+        }
+        &-fav{
+            position: absolute;
+            border: none;
+            padding: 0;
+            bottom: 2rem;
+            right: 1.5rem;
+
+            .fa-heart{
+                height: 1.5rem;
+            }
+        }
+    }
+}
