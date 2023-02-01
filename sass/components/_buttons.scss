@@ -3,5 +3,5 @@
     @include shadow-frame;
     border-radius: 100px;
     color: white;
-    background: linear-gradient(350deg, $color-primary 0%, $color-secondary 100%);
+    background: $color-btn;
 }

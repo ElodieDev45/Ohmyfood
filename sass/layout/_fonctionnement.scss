@@ -17,7 +17,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        background-color: rgb(250, 250, 250);
+        background-color: $color-backg-sect;
         height: 4.5rem;
         border-radius: 1.5rem;
         @include shadow-frame;
@@ -40,15 +40,16 @@
 
         svg{
             margin: 0 1.2rem 0 0.7rem;
-            color: grey;
-            font-size: 1.1rem;
+            color: darken($color: $color-backg-sect, $amount: 50%);
+            font-size: 1.15rem;
 
         }
 
-        &--lila{
-            background-color: rgba(147,86,220,0.1);
+        &--color{
+            background-color: lighten($color: $color-primary, $amount: 35%);
+
             svg{
-            color: $color-primary;
+                color: $color-primary;
             }
         }
     }

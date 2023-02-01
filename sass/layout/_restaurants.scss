@@ -1,6 +1,6 @@
 .rest{
     padding: 2rem 1.2rem 4rem;
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: $color-backg-sect;
     display: flex;
     flex-direction: column;
 
@@ -18,7 +18,7 @@
         @include shadow-frame;
         border-radius: 1rem;
 
-        figure{
+        &-fig{
             display: flex;
             flex-direction: column;
             margin: 0;
@@ -31,7 +31,7 @@
             font-size: 0.9rem;
             font-weight: 500;
             padding: 0.3rem 0.5rem;
-            color: $color-tertiary-dark;
+            color: darken($color: $color-tertiary, $amount: 38%);
 
             &--inactive{
                 display: none;
