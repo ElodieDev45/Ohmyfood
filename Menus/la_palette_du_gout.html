@@ -21,9 +21,9 @@
             </div>
         </header>
         <main>
-            <section class="rest__frame main__frame"> <!--entete menu avec titre et photo-->
+            <section class="rest"> <!--entete menu avec titre et photo-->
                 <figure class="rest__frame-fig">
-                    <img class="rest__frame-picture main__frame-picture" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                    <img class="rest__frame-picture" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
                     <figcaption>
                         <h1 class="titles">La palette du goût</h1>
                         <button type="button" class="rest__frame-fav">
@@ -32,103 +32,103 @@
                     </figcaption>
                 </figure>
             </section>
-            <div class="menu_composition">
+            <div class="menu"><!--liste des plats du menu du restaurant-->
                 <form method="get" action="">
                     <fieldset>
                         <legend>ENTRÉES</legend>
-                        <div class="plat entrees">
+                        <div class="menu-dishes">
                             <label for="escargots">
-                                <span class="nom box_1">Fricassée d'escargots</span>
-                                <span class="detail box_2">Au piment d'Espelette</span>
-                                <span class="prix box_3">25€</span>
+                                <span class="menu-dishes__name">Fricassée d'escargots</span>
+                                <span class="menu-dishes__detail">Au piment d'Espelette</span>
+                                <span class="menu-dishes__price">25€</span>
                             </label>
-                            <div class="btn_radio">
+                            <div class="menu-dishes__choice">
                                 <input type="radio" name="entrees" value="escargots" id="escargots">
                             </div>
                         </div>
-                        <Div class="plat entrees">
+                        <Div class="menu-dishes">
                             <label for="foie-gras">
-                                <span class="nom box_1">Foie gras de canard mi-cuit</span>
-                                <span class="detail box_2">Et ses copeaux de truffe noire</span>
-                                <span class="prix box_3">35€</span>
+                                <span class="menu-dishes__name">Foie gras de canard mi-cuit</span>
+                                <span class="menu-dishes__detail">Et ses copeaux de truffe noire</span>
+                                <span class="menu-dishes__price">35€</span>
                             </label>
-                            <div class="btn_radio">
+                            <div class="menu-dishes__choice">
                                 <input type="radio" name="entrees" value="foie-gras" id="foie-gras">
                             </div>
                         </Div>
-                        <div class="plat entrees">
+                        <div class="menu-dishes">
                             <label for="oeuf-plat">
-                                <span class="nom box_1">Oeuf au plat</span>
-                                <span class="detail box_2">Assaisonné à la truffe sur lit de caviar</span>
-                                <span class="prix box_3">20€</span>
+                                <span class="menu-dishes__name">Oeuf au plat</span>
+                                <span class="menu-dishes__detail">Assaisonné à la truffe sur lit de caviar</span>
+                                <span class="menu-dishes__price">20€</span>
                             </label>
-                            <div class="btn_radio">
+                            <div class="menu-dishes__choice">
                                 <input type="radio" name="entrees" value="oeuf-plat" id="oeuf-plat">
                             </div>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>PLATS</legend>
-                        <div class="plat plats">
+                        <div class="menu-dishes">
                             <label for="filet-boeuf">
-                                <span class="nom box_1">Filet de boeuf aux herbes</span>
-                                <span class="detail box_2">Accompagné de sa ribambelle de légumes</span>
-                                <span class="prix box_3">40€</span>
+                                <span class="menu-dishes__name">Filet de boeuf aux herbes</span>
+                                <span class="menu-dishes__detail">Accompagné de sa ribambelle de légumes</span>
+                                <span class="menu-dishes__price">40€</span>
                             </label>
-                            <div class="btn_radio">
+                            <div class="menu-dishes__choice">
                                 <input type="radio" name="plats" value="filet-boeuf" id="filet-boeuf">
                             </div>
                         </div>
-                        <div class="plat plats">
+                        <div class="menu-dishes">
                             <label for="parmentier-queue">
-                                <span class="nom box_1">Parmentier de queue de boeuf</span>
-                                <span class="detail box_2">À la truffe noire sur sa purée de panais</span>
-                                <span class="prix box_3">35€</span>
+                                <span class="menu-dishes__name">Parmentier de queue de boeuf</span>
+                                <span class="menu-dishes__detail">À la truffe noire sur sa purée de panais</span>
+                                <span class="menu-dishes__price">35€</span>
                             </label>
-                            <div class="btn_radio">
+                            <div class="menu-dishes__choice">
                                 <input type="radio" name="plats" value="parmentier-queue" id="parmentier-queue">
                             </div>
                         </div>
-                        <div class="plat plats">
+                        <div class="menu-dishes">
                             <label for="filet-turbot">
-                                <span class="nom box_1">Filet de turbot</span>
-                                <span class="detail box_2">Aux agrumes</span>
-                                <span class="prix box_3">44€</span>
+                                <span class="menu-dishes__name">Filet de turbot</span>
+                                <span class="menu-dishes__detail">Aux agrumes</span>
+                                <span class="menu-dishes__price">44€</span>
                             </label>
-                            <div class="btn_radio">
+                            <div class="menu-dishes__choice">
                                 <input type="radio" name="plats" value="filet-turbot" id="filet-turbot">
                             </div>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>DESSERTS</legend>
-                        <div class="plat desserts">
+                        <div class="menu-dishes">
                             <label for="paris-brest">
-                                <span class="nom box_1">Paris-Brest</span>
-                                <span class="detail box_2">Revisité</span>
-                                <span class="prix box_3">18€</span>
+                                <span class="menu-dishes__name">Paris-Brest</span>
+                                <span class="menu-dishes__detail">Revisité</span>
+                                <span class="menu-dishes__price">18€</span>
                             </label>
-                            <div class="btn_radio">
+                            <div class="menu-dishes__choice">
                                 <input type="radio" name="desserts" value="paris-brest" id="paris-brest">
                             </div>    
                         </div>
-                        <div class="plat desserts">
+                        <div class="menu-dishes">
                             <label for="macaron-chocolat">
-                                <span class="nom box_1">Macaron au chocolat d'exception</span>
-                                <span class="detail box_2">Et glace à la vanille de Madagascar</span>
-                                <span class="prix box_3">22€</span>
+                                <span class="menu-dishes__name">Macaron au chocolat d'exception</span>
+                                <span class="menu-dishes__detail">Et glace à la vanille de Madagascar</span>
+                                <span class="menu-dishes__price">22€</span>
                             </label>
-                            <div class="btn_radio">
+                            <div class="menu-dishes__choice">
                                 <input type="radio" name="desserts" value="macaron-chocolat" id="macaron-chocolat">
                             </div>
                         </div>
-                        <div class="plat desserts">
+                        <div class="menu-dishes">
                             <label for="mousse-chocolat">
-                                <span class="nom box_1">Mousse au chocolat</span>
-                                <span class="detail box_2">Au piment d'Espelette et à la truffe noire</span>
-                                <span class="prix box_3">23€</span>
+                                <span class="menu-dishes__name">Mousse au chocolat</span>
+                                <span class="menu-dishes__detail">Au piment d'Espelette et à la truffe noire</span>
+                                <span class="menu-dishes__price">23€</span>
                             </label>
-                            <div class="btn_radio">
+                            <div class="menu-dishes__choice">
                                 <input type="radio" name="desserts" value="mousse-chocolat" id="mousse-chocolat">
                             </div>
                         </div>
