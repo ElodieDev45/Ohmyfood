@@ -1,7 +1,10 @@
-.btn{
+@mixin btn{
+    display: flex;
+    align-items: center;
+    height: 2rem;
     padding: 10px 25px;
-    @include shadow-frame;
     border-radius: 100px;
     color: white;
     background: $color-btn;
+    @include shadow-frame($color:darken($color-shadow,15));
 }

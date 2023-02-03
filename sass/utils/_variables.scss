@@ -4,6 +4,8 @@ $color-secondary:#FF79DA;
 
 $color-tertiary:#99E2D0;
 
-$color-btn: linear-gradient(350deg, $color-primary 0%, $color-secondary 100%);
+$color-btn: linear-gradient(to bottom right, $color-secondary, $color-primary);
 
 $color-backg-sect:rgb(245,245,245);
+
+$color-shadow: rgba(225, 225, 225, 1)

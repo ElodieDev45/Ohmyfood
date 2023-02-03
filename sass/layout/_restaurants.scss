@@ -67,10 +67,20 @@
             padding: 0;
             bottom: 2rem;
             right: 1.5rem;
+            &:hover{
+                cursor: pointer;
+            }
 
             .fa-heart{
                 height: 1.5rem;
+                transform: scale(1);
+                transition: color 500ms;
+
+                &:hover{                    
+                    color: $color-primary;
+                }
             }
+
         }
     }
 }
