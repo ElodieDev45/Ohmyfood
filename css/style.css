@@ -29,6 +29,33 @@ body {
   width: 100%;
 }
 
+footer {
+  background-color: #383838;
+  margin: 0;
+  padding: 0.7rem 1.5rem;
+}
+footer img {
+  width: 6rem;
+  filter: invert(100%);
+}
+footer ul {
+  list-style-type: none;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  font-weight: 300;
+}
+footer ul a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+footer ul a svg {
+  font-size: 0.8rem;
+  width: 1.3rem;
+  padding-right: 0.5rem;
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -219,33 +246,6 @@ nav .nav__link:hover {
 }
 .rest__frame-fav .fa-heart:hover {
   color: #9356DC;
-}
-
-footer {
-  background-color: #383838;
-  margin: 0;
-  padding: 0.7rem 1.5rem;
-}
-footer img {
-  width: 6rem;
-  filter: invert(100%);
-}
-footer ul {
-  list-style-type: none;
-  margin: 1rem 0 1.5rem;
-  padding: 0;
-  font-weight: 300;
-}
-footer ul a {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  margin-bottom: 0.5rem;
-}
-footer ul a svg {
-  font-size: 0.8rem;
-  width: 1.3rem;
-  padding-right: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
