@@ -35,9 +35,9 @@
             <section id="fontionnement" class="funct">
                 <h2>Fonctionnement</h2>
                 <ul>
-                    <li class="funct__list"><span>1</span><svg class="fa-solid fa-mobile-screen-button"></svg>Choississez un Restaurant</li>
-                    <li class="funct__list"><span>2</span><svg class="fa-solid fa-list-ul"></svg>Composez votre menu</li>
-                    <li class="funct__list funct__list--color"><span>3</span><svg class="fa-solid fa-store"></svg>Dégustez au restaurant</li>
+                    <li class="funct__list"><span>1</span><i class="fa-solid fa-mobile-screen-button"></i>Choississez un Restaurant</li>
+                    <li class="funct__list"><span>2</span><i class="fa-solid fa-list-ul"></i>Composez votre menu</li>
+                    <li class="funct__list funct__list--color"><span>3</span><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
                 </ul>
             </section>
             <section id="restaurants" class="rest">
@@ -56,12 +56,9 @@
                                 </figcaption>
                             </figure>
                         </a>
-                        <button type="button" class="rest__frame-fav">
-                            <i class="fa-regular fa-heart">heart</i>
+                        <button type="button" class="rest__frame-fav"> <!--due laisser un texte pour éviter erreur sur "button" par VSCode avec création d'un fichier pour ignorer l'erreur"-->
+                            <i class="fa-solid fa-heart"></i>heart
                         </button>
-                        <!-- <button type="button" class="rest__frame-favsolid">
-                            <i class="fa-solid fa-heart">heart</i>
-                        </button> -->
                     </article>
                     <article class="rest__frame">
                         <a href="./Menus/la_note_enchantee.html">
@@ -77,7 +74,7 @@
                             </figure>
                         </a>
                         <button type="button" class="rest__frame-fav">
-                            <i class="fa-regular fa-heart">heart</i>
+                            <i class="fa-solid fa-heart"></i>heart
                         </button>
                     </article>
                     <article class="rest__frame">
@@ -94,7 +91,7 @@
                             </figure>
                         </a>
                         <button type="button" class="rest__frame-fav">
-                            <i class="fa-regular fa-heart">heart</i>
+                            <i class="fa-solid fa-heart"></i>heart
                         </button>
                     </article>
                     <article class="rest__frame">
@@ -110,9 +107,11 @@
                                 </figcaption>
                             </figure>
                         </a>
-                        <button type="button" class="rest__frame-fav">
-                            <i class="fa-regular fa-heart">heart</i>
-                        </button>
+                        <!--class div laissée en expl pour gregory pour montrer que pseudo-class ":active" ou même ":visited" ne fonctionne pas pour rester cliqué après le clic avec le CSS-->
+                        <!--donc laissé en button pour les 3 1ers restaurants-->
+                        <div class="rest__frame-fav">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
                     </article>
                 </div>
             </section>

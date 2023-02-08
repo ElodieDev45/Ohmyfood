@@ -50,7 +50,7 @@ footer ul a {
   color: #fff;
   margin-bottom: 0.5rem;
 }
-footer ul a svg {
+footer ul a i {
   font-size: 0.8rem;
   width: 1.3rem;
   padding-right: 0.5rem;
@@ -157,7 +157,7 @@ nav .nav__link:hover {
   font-size: 0.8rem;
   font-weight: 500;
 }
-.funct__list svg {
+.funct__list i {
   margin: 0 1.2rem 0 0.7rem;
   color: #767676;
   font-size: 1.15rem;
@@ -235,17 +235,30 @@ nav .nav__link:hover {
   padding: 0;
   bottom: 2rem;
   right: 1.5rem;
-}
-.rest__frame-fav:hover {
-  cursor: pointer;
+  font-size: 0;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 .rest__frame-fav .fa-heart {
-  height: 1.5rem;
-  transform: scale(1);
-  transition: color 500ms;
+  font-size: 1.4rem;
+  background-image: rgb(245, 245, 245);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .rest__frame-fav .fa-heart:hover {
-  color: #9356DC;
+  cursor: pointer;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-stroke-width: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
+}
+.rest__frame-fav:focus, .rest__frame-fav:active {
+  cursor: pointer;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
