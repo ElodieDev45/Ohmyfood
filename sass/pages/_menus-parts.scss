@@ -1,0 +1,98 @@
+.menu{
+    display: flex;
+    form{
+        padding: 1rem;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__category{
+        &-1,&-2,&-3{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 1rem;
+            width: 100%;
+            border-style: none;
+            transition: width 3s;
+            // &:hover{
+            //     width: 80%;
+            //     transition: width 5s;
+            // }
+
+            legend{
+                width: 2rem;
+                border-bottom:solid 3px $color-tertiary;
+                background-color: white;
+                border-bottom: 2px solid #99E2D0;
+                padding: 0.3rem;
+                margin-bottom: 0.35rem;
+            }
+        }
+    }
+    &__dishes{
+        &-1,&-2,&-3,&-4,&-5,&-6,&-7,&-8,&-9{
+            display: flex;
+            justify-content: space-between;
+            // width: 100%;
+            background-color: white;
+            border-radius: 0.5rem;
+            @include shadow-frame;
+            padding: 0;
+            overflow: hidden;
+
+            label{
+                display: grid;
+                width: 85%;
+                grid-template-columns: 85% 15%;
+                grid-template-rows: 50% 50%;
+                padding: .6rem;
+                row-gap: 0.2rem;
+
+                .menu__dishes-name, .menu__dishes-detail{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .menu__dishes-name{
+                    grid-area: 1 / 1;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                }
+                .menu__dishes-detail{
+                    grid-area: 2 / 1;
+                    font-size: 0.9rem;
+                }
+                .menu__dishes-price{
+                    grid-area: 2 / 2;
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        &-choice{
+            display: flex;            
+            @include flex-totaly-center;
+            width: 15%;
+            background-color: $color-tertiary;
+
+            input[type=radio]{
+                size: 3rem;
+                margin: 0;
+            }
+        }
+    }
+
+    &__btn{
+        @include btn;
+        margin: 1rem 0.5rem 3.5rem;
+
+        &:hover{
+            background: linear-gradient(to bottom right, lighten($color-secondary, 9), lighten($color-primary, 9));
+            @include shadow-frame($color:darken($color-shadow, 30));
+        }
+    }
+}
