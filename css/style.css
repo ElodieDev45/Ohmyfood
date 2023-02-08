@@ -11,22 +11,31 @@ body {
   margin: 0;
 }
 
-.titles {
-  font-family: "Shrikhand", cursive;
-}
-
 .container {
   width: 100%;
   margin: 0;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+}
 .header__logo {
+  position: relative;
   width: 45%;
   margin: 0 auto;
   padding: 1.2rem 0 0.5rem;
 }
 .header__logo img {
   width: 100%;
+}
+.header__arrow {
+  position: absolute;
+  left: 1.5rem;
+  font-size: 0;
+}
+.header__arrow i {
+  font-size: 1.3rem;
 }
 
 footer {
@@ -254,6 +263,69 @@ nav .nav__link:hover {
   -webkit-text-stroke-color: transparent;
 }
 .rest__frame-fav:focus, .rest__frame-fav:active {
+  cursor: pointer;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: transparent;
+}
+
+.sign {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 19rem;
+}
+.sign__picture {
+  position: relative;
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+.sign__picture--vertical {
+  object-position: 0 62%;
+}
+.sign__titles {
+  position: absolute;
+  bottom: 0rem;
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  border-radius: 3rem 3rem 0 0;
+  margin: 0;
+}
+.sign__titles-name {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-left: 1rem;
+  margin: 2rem 0 0.8rem;
+}
+.sign__titles-fav {
+  position: absolute;
+  border: none;
+  padding: 0;
+  bottom: 1.5rem;
+  right: 2.5rem;
+  font-size: 0;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.sign__titles-fav .fa-heart {
+  font-size: 1.4rem;
+  background-image: rgb(245, 245, 245);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sign__titles-fav .fa-heart:hover {
+  cursor: pointer;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-stroke-width: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
+}
+.sign__titles-fav:focus, .sign__titles-fav:active {
   cursor: pointer;
   background-image: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;

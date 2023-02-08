@@ -8,3 +8,39 @@
     background: $color-btn;
     @include shadow-frame($color:darken($color-shadow,15));
 }
+
+@mixin heart($bottom:2rem, $right:1.5rem, $size:1.4rem){
+    &-fav{
+        position: absolute;
+        border: none;
+        padding: 0;
+        bottom: $bottom;
+        right: $right;
+        font-size: 0;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        
+        .fa-heart{
+            font-size: $size;
+            background-image: $color-backg-sect;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            &:hover{ 
+                cursor: pointer;
+                background-image: linear-gradient($color-primary, $color-secondary);
+                -webkit-text-stroke-width: 0;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-color: transparent;                       
+            }
+        }
+        &:focus, &:active{ 
+            cursor: pointer;
+            background-image: linear-gradient($color-primary, $color-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-stroke-width: 0;
+            -webkit-text-stroke-color: transparent;
+        }
+    }
+}

@@ -1,5 +1,9 @@
 .header{
+    display: flex;
+    align-items: center;
+
     &__logo{
+        position: relative;
         width: 45%;
         margin: 0 auto;
         padding: 1.2rem 0 0.5rem;
@@ -7,4 +11,13 @@
             width: 100%;
         }
     }
+    &__arrow{
+        position: absolute;
+        left: 1.5rem;
+        font-size: 0;
+        i{
+            font-size: 1.3rem;
+        }
+    }
+
 }
