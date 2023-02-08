@@ -67,20 +67,32 @@
             padding: 0;
             bottom: 2rem;
             right: 1.5rem;
-            &:hover{
-                cursor: pointer;
-            }
-
+            font-size: 0;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            
             .fa-heart{
-                height: 1.5rem;
-                transform: scale(1);
-                transition: color 500ms;
+                font-size: 1.4rem;
+                background-image: $color-backg-sect;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
 
-                &:hover{                    
-                    color: $color-primary;
+                &:hover{ 
+                    cursor: pointer;
+                    background-image: linear-gradient($color-primary, $color-secondary);
+                    -webkit-text-stroke-width: 0;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke-color: transparent;                       
                 }
             }
-
+            &:focus, &:active{ 
+                cursor: pointer;
+                background-image: linear-gradient($color-primary, $color-secondary);
+                -webkit-background-clip: text;
+                -webkit-text-stroke-width: 0;
+                -webkit-text-stroke-color: transparent;
+            }
         }
     }
 }
