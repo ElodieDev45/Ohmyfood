@@ -35,7 +35,9 @@
                 -webkit-text-stroke-width: 0;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                -webkit-text-stroke-color: transparent;                       
+                -webkit-text-stroke-color: transparent;
+                // transform: translateX(-200%);
+                // transition: transform 10s;                       
             }
         }
         &:focus, &:active{ 
@@ -44,6 +46,8 @@
             -webkit-background-clip: text;
             -webkit-text-stroke-width: 0;
             -webkit-text-stroke-color: transparent;
+            // transform: translateX(-200%);
+            // transition: transform 10s;                       
         }
     }
 }

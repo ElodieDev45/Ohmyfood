@@ -49,11 +49,16 @@
                 padding: .8rem 1.2rem 0.8rem 0.8rem;
                 row-gap: 0.2rem;
                 &:hover + .menu__dishes-choice{
-                    transition: width 3s;
-                    display: flex;            
-                    @include flex-totaly-center;
+                    transition: right 2s linear, width 4s;
+                    // transition-delay: 0s, 1s;
+                    right: 0%;
                     width: 22%;
-                    background-color: $color-tertiary;
+                    
+                    /*test de transition par le changement de width*/
+                    // display: flex;            
+                    // @include flex-totaly-center;
+                    // width: 22%;
+                    // background-color: $color-tertiary;
                 }
 
                 .menu__dishes-name, .menu__dishes-detail{
@@ -80,25 +85,30 @@
             }
         }
         &-choice{
+            position: relative;
+            right: -22%;
             display: flex;            
             @include flex-totaly-center;
             width: 0%;
             background-color: $color-tertiary;
-            // &:hover, &:active, &:checked{
-            //     display: flex;            
-            //     @include flex-totaly-center;
-            //     width: 16%;
-            //     background-color: $color-tertiary;
-            // }
+
+            /*2nd parti test de transition par la width seule*/
+            // width: 0%;
+            // background-color: $color-tertiary;
+
             input[type="radio"].choix{
-                visibility: hidden;
-            //     &::before{
-            //         font-family: "Font Awesome 5 Free";
-            //         content: "\f058";
-            //         font-size: 1.5rem;
-            //         font-weight: 900;
-            //         color: darken($color: $color-tertiary, $amount: 30);
-            //     }
+                // visibility: hidden;
+                margin: 0;
+
+                /*test remplacement visuel du bouton radio*/
+                // &::before{
+                //     position: inherit;
+                //     font-family: "Font Awesome 5 Free";
+                //     content: "\f058";
+                //     font-size: 1.5rem;
+                //     font-weight: 900;
+                //     color: white;
+                // }
             }
         }
     }

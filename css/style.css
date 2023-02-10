@@ -387,12 +387,10 @@ nav .nav__link:hover {
   row-gap: 0.2rem;
 }
 .menu__dishes-1 label:hover + .menu__dishes-choice, .menu__dishes-2 label:hover + .menu__dishes-choice, .menu__dishes-3 label:hover + .menu__dishes-choice, .menu__dishes-4 label:hover + .menu__dishes-choice, .menu__dishes-5 label:hover + .menu__dishes-choice, .menu__dishes-6 label:hover + .menu__dishes-choice, .menu__dishes-7 label:hover + .menu__dishes-choice, .menu__dishes-8 label:hover + .menu__dishes-choice, .menu__dishes-9 label:hover + .menu__dishes-choice {
-  transition: width 3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: right 2s linear, width 4s;
+  right: 0%;
   width: 22%;
-  background-color: #99E2D0;
+  /*test de transition par le changement de width*/
 }
 .menu__dishes-1 label .menu__dishes-name, .menu__dishes-1 label .menu__dishes-detail, .menu__dishes-2 label .menu__dishes-name, .menu__dishes-2 label .menu__dishes-detail, .menu__dishes-3 label .menu__dishes-name, .menu__dishes-3 label .menu__dishes-detail, .menu__dishes-4 label .menu__dishes-name, .menu__dishes-4 label .menu__dishes-detail, .menu__dishes-5 label .menu__dishes-name, .menu__dishes-5 label .menu__dishes-detail, .menu__dishes-6 label .menu__dishes-name, .menu__dishes-6 label .menu__dishes-detail, .menu__dishes-7 label .menu__dishes-name, .menu__dishes-7 label .menu__dishes-detail, .menu__dishes-8 label .menu__dishes-name, .menu__dishes-8 label .menu__dishes-detail, .menu__dishes-9 label .menu__dishes-name, .menu__dishes-9 label .menu__dishes-detail {
   white-space: nowrap; /* passage à la ligne interdit et blancs regroupés*/
@@ -416,14 +414,18 @@ nav .nav__link:hover {
   text-align: right;
 }
 .menu__dishes-choice {
+  position: relative;
+  right: -22%;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 0%;
   background-color: #99E2D0;
+  /*2nd parti test de transition par la width seule*/
 }
 .menu__dishes-choice input[type=radio].choix {
-  visibility: hidden;
+  margin: 0;
+  /*test remplacement visuel du bouton radio*/
 }
 .menu__btn {
   display: flex;
