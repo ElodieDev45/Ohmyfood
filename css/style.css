@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -9,10 +10,11 @@ a {
 
 body {
   margin: 0;
+  letter-spacing: normal;
 }
 
 .container {
-  min-width: 375px;
+  min-width: 320px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -113,10 +115,13 @@ nav h2 {
 }
 nav .nav__link {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 2rem;
-  padding: 10px 25px;
-  border-radius: 100px;
+  width: auto;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 6rem;
   color: white;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0 5px 10px #bbbbbb;
@@ -275,21 +280,21 @@ nav .nav__link:hover {
   padding: 0;
   margin: 0;
   position: relative;
-  height: 19rem;
+  height: 17.5rem;
 }
 .sign__picture {
   position: relative;
-  height: 90%;
+  height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: top;
 }
 .sign__picture--vertical {
   object-position: 0 62%;
 }
 .sign__titles {
   position: absolute;
-  bottom: 0rem;
+  bottom: -0.9rem;
   background-color: rgb(245, 245, 245);
   width: 100%;
   border-radius: 3rem 3rem 0 0;
@@ -300,13 +305,13 @@ nav .nav__link:hover {
   font-size: 1.8rem;
   font-weight: 500;
   padding-left: 1rem;
-  margin: 2rem 0 0.8rem;
+  margin: 2rem 0 0rem;
 }
 .sign__titles-fav {
   position: absolute;
   border: none;
   padding: 0;
-  bottom: 1.5rem;
+  bottom: 0.7rem;
   right: 2.5rem;
   font-size: 0;
   -webkit-text-stroke-width: 1px;
@@ -338,9 +343,10 @@ nav .nav__link:hover {
   display: flex;
 }
 .menu form {
-  padding: 1rem;
   display: flex;
+  padding: 0 0.8rem;
   width: 100%;
+  background-color: rgb(245, 245, 245);
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -348,23 +354,24 @@ nav .nav__link:hover {
 .menu__category-1, .menu__category-2, .menu__category-3 {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 1rem;
+  gap: 0.8rem;
+  padding: 0;
+  margin: 2.2rem 0 0 0;
   width: 100%;
   border-style: none;
-  transition: width 3s;
 }
 .menu__category-1 legend, .menu__category-2 legend, .menu__category-3 legend {
-  width: 2rem;
+  width: 2.5rem;
   border-bottom: solid 3px #99E2D0;
-  background-color: white;
-  border-bottom: 2px solid #99E2D0;
-  padding: 0.3rem;
-  margin-bottom: 0.35rem;
+  background-color: rgb(245, 245, 245);
+  border-bottom: 3px solid #99E2D0;
+  padding: 0.3rem 0 0.4rem;
+  margin-bottom: 0.7rem;
 }
 .menu__dishes-1, .menu__dishes-2, .menu__dishes-3, .menu__dishes-4, .menu__dishes-5, .menu__dishes-6, .menu__dishes-7, .menu__dishes-8, .menu__dishes-9 {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 5px 10px rgb(225, 225, 225);
@@ -373,16 +380,24 @@ nav .nav__link:hover {
 }
 .menu__dishes-1 label, .menu__dishes-2 label, .menu__dishes-3 label, .menu__dishes-4 label, .menu__dishes-5 label, .menu__dishes-6 label, .menu__dishes-7 label, .menu__dishes-8 label, .menu__dishes-9 label {
   display: grid;
-  width: 85%;
-  grid-template-columns: 85% 15%;
+  width: 100%;
+  grid-template-columns: 80% 20%;
   grid-template-rows: 50% 50%;
-  padding: 0.6rem;
+  padding: 0.8rem 1.2rem 0.8rem 0.8rem;
   row-gap: 0.2rem;
 }
+.menu__dishes-1 label:hover + .menu__dishes-choice, .menu__dishes-2 label:hover + .menu__dishes-choice, .menu__dishes-3 label:hover + .menu__dishes-choice, .menu__dishes-4 label:hover + .menu__dishes-choice, .menu__dishes-5 label:hover + .menu__dishes-choice, .menu__dishes-6 label:hover + .menu__dishes-choice, .menu__dishes-7 label:hover + .menu__dishes-choice, .menu__dishes-8 label:hover + .menu__dishes-choice, .menu__dishes-9 label:hover + .menu__dishes-choice {
+  transition: width 3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22%;
+  background-color: #99E2D0;
+}
 .menu__dishes-1 label .menu__dishes-name, .menu__dishes-1 label .menu__dishes-detail, .menu__dishes-2 label .menu__dishes-name, .menu__dishes-2 label .menu__dishes-detail, .menu__dishes-3 label .menu__dishes-name, .menu__dishes-3 label .menu__dishes-detail, .menu__dishes-4 label .menu__dishes-name, .menu__dishes-4 label .menu__dishes-detail, .menu__dishes-5 label .menu__dishes-name, .menu__dishes-5 label .menu__dishes-detail, .menu__dishes-6 label .menu__dishes-name, .menu__dishes-6 label .menu__dishes-detail, .menu__dishes-7 label .menu__dishes-name, .menu__dishes-7 label .menu__dishes-detail, .menu__dishes-8 label .menu__dishes-name, .menu__dishes-8 label .menu__dishes-detail, .menu__dishes-9 label .menu__dishes-name, .menu__dishes-9 label .menu__dishes-detail {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: nowrap; /* passage à la ligne interdit et blancs regroupés*/
+  overflow: hidden; /*le contenu qui dépasse est rogné*/
+  text-overflow: ellipsis; /*points de suspension remplacent le texte rogné*/
 }
 .menu__dishes-1 label .menu__dishes-name, .menu__dishes-2 label .menu__dishes-name, .menu__dishes-3 label .menu__dishes-name, .menu__dishes-4 label .menu__dishes-name, .menu__dishes-5 label .menu__dishes-name, .menu__dishes-6 label .menu__dishes-name, .menu__dishes-7 label .menu__dishes-name, .menu__dishes-8 label .menu__dishes-name, .menu__dishes-9 label .menu__dishes-name {
   grid-area: 1/1;
@@ -397,29 +412,33 @@ nav .nav__link:hover {
   grid-area: 2/2;
   text-align: center;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  text-align: right;
 }
 .menu__dishes-choice {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15%;
+  width: 0%;
   background-color: #99E2D0;
 }
-.menu__dishes-choice input[type=radio] {
-  size: 3rem;
-  margin: 0;
+.menu__dishes-choice input[type=radio].choix {
+  visibility: hidden;
 }
 .menu__btn {
   display: flex;
+  justify-content: center;
   align-items: center;
-  height: 2rem;
-  padding: 10px 25px;
-  border-radius: 100px;
+  height: auto;
+  width: auto;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  border-radius: 6rem;
   color: white;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0 5px 10px #bbbbbb;
-  margin: 1rem 0.5rem 3.5rem;
+  margin: 2.5rem 0 1.7rem;
+  border: none;
 }
 .menu__btn:hover {
   background: linear-gradient(to bottom right, #ffa7e7, #ab7ce4);

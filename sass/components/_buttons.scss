@@ -1,9 +1,12 @@
-@mixin btn{
+@mixin btn ($Height:2rem, $Width:auto, $PadTopBott:0.6rem, $PadRightLeft:1.5rem, $FontSize:1rem){
     display: flex;
+    justify-content: center;
     align-items: center;
-    height: 2rem;
-    padding: 10px 25px;
-    border-radius: 100px;
+    height: $Height;
+    width: $Width;
+    font-size: $FontSize;
+    padding: $PadTopBott $PadRightLeft;
+    border-radius: 6rem;
     color: white;
     background: $color-btn;
     @include shadow-frame($color:darken($color-shadow,15));

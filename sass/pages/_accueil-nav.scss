@@ -44,7 +44,7 @@ nav{
         margin: 0.4rem 0.5rem 1rem;
     }
     .nav__link{
-        @include btn;
+        @include btn($Height:2rem);
         margin: 1rem 0.5rem 3.5rem;
 
         &:hover{

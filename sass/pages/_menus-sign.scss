@@ -2,14 +2,14 @@
     padding: 0;
     margin: 0;
     position: relative;
-    height: 19rem;
+    height: 17.5rem;
 
     &__picture{
         position: relative;
-        height: 90%;
+        height: 100%;
         width: 100%;
         object-fit: cover;
-        object-position: bottom;
+        object-position: top;
 
         &--vertical{
             object-position: 0 62%;
@@ -18,7 +18,7 @@
 
     &__titles{    
         position: absolute;
-        bottom: 0rem;
+        bottom: -0.9rem;
         background-color: $color-backg-sect;
         width: 100%;
         border-radius: 3rem 3rem 0 0;
@@ -29,9 +29,9 @@
             font-size: 1.8rem;
             font-weight: 500;
             padding-left:1rem;
-            margin: 2rem 0 0.8rem;
+            margin: 2rem 0 0rem;
         }
         
-        @include heart ($bottom:1.5rem, $right:2.5rem);
+        @include heart ($bottom:0.7rem, $right:2.5rem);
     }
 }
