@@ -92,7 +92,7 @@ nav #localization label {
   gap: 1rem;
   font-size: 1.1rem;
   font-weight: bold;
-  padding-bottom: 1px;
+  padding-bottom: 0.06rem;
 }
 nav #localization select {
   appearance: none;
@@ -124,12 +124,12 @@ nav .nav__link {
   border-radius: 6rem;
   color: white;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  box-shadow: 0 5px 10px #bbbbbb;
+  box-shadow: 0 0.3rem 0.6rem #bbbbbb;
   margin: 1rem 0.5rem 3.5rem;
 }
 nav .nav__link:hover {
   background: linear-gradient(to bottom right, #ffa7e7, #ab7ce4);
-  box-shadow: 0 5px 10px #959595;
+  box-shadow: 0 0.3rem 0.6rem #959595;
 }
 
 .funct {
@@ -154,7 +154,7 @@ nav .nav__link:hover {
   background-color: rgb(245, 245, 245);
   height: 4.5rem;
   border-radius: 1.5rem;
-  box-shadow: 0 5px 10px rgb(225, 225, 225);
+  box-shadow: 0 0.3rem 0.6rem rgb(225, 225, 225);
   margin-left: 1rem;
   font-weight: 600;
 }
@@ -201,7 +201,7 @@ nav .nav__link:hover {
 .rest__frame {
   position: relative;
   width: 100%;
-  box-shadow: 0 5px 10px rgb(225, 225, 225);
+  box-shadow: 0 0.3rem 0.6rem rgb(225, 225, 225);
   border-radius: 1rem;
 }
 .rest__frame-fig {
@@ -251,29 +251,40 @@ nav .nav__link:hover {
   bottom: 2rem;
   right: 1.5rem;
   font-size: 0;
-  -webkit-text-stroke-width: 1px;
+}
+.rest__frame-fav .heart-1 {
+  position: absolute;
+  right: 0rem;
+  bottom: 0rem;
+  opacity: 1;
+  z-index: 0;
+  font-size: 1.5rem;
+  background-image: linear-gradient(rgb(245, 245, 245), rgb(245, 245, 245));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.06rem;
   -webkit-text-stroke-color: black;
 }
-.rest__frame-fav .fa-heart {
-  font-size: 1.4rem;
-  background-image: rgb(245, 245, 245);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.rest__frame-fav .heart-1:link, .rest__frame-fav .heart-1:visited, .rest__frame-fav .heart-1:hover, .rest__frame-fav .heart-1:active {
+  opacity: 0;
+  transition: opacity 1.5s;
 }
-.rest__frame-fav .fa-heart:hover {
-  cursor: pointer;
+.rest__frame-fav .heart-2 {
+  position: absolute;
+  right: 0rem;
+  bottom: 0rem;
+  opacity: 0;
+  z-index: 0;
+  font-size: 1.5rem;
   background-image: linear-gradient(#9356DC, #FF79DA);
-  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-width: 0.06rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: transparent;
 }
-.rest__frame-fav:focus, .rest__frame-fav:active {
-  cursor: pointer;
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-stroke-width: 0;
-  -webkit-text-stroke-color: transparent;
+.rest__frame-fav .heart-2:link, .rest__frame-fav .heart-2:visited, .rest__frame-fav .heart-2:hover, .rest__frame-fav .heart-2:active {
+  opacity: 1;
+  transition: opacity 1.5s;
 }
 
 .sign {
@@ -314,29 +325,40 @@ nav .nav__link:hover {
   bottom: 0.7rem;
   right: 2.5rem;
   font-size: 0;
-  -webkit-text-stroke-width: 1px;
+}
+.sign__titles-fav .heart-1 {
+  position: absolute;
+  right: 0rem;
+  bottom: 0rem;
+  opacity: 1;
+  z-index: 0;
+  font-size: 1.5rem;
+  background-image: linear-gradient(rgb(245, 245, 245), rgb(245, 245, 245));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.06rem;
   -webkit-text-stroke-color: black;
 }
-.sign__titles-fav .fa-heart {
-  font-size: 1.4rem;
-  background-image: rgb(245, 245, 245);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.sign__titles-fav .heart-1:link, .sign__titles-fav .heart-1:visited, .sign__titles-fav .heart-1:hover, .sign__titles-fav .heart-1:active {
+  opacity: 0;
+  transition: opacity 1.5s;
 }
-.sign__titles-fav .fa-heart:hover {
-  cursor: pointer;
+.sign__titles-fav .heart-2 {
+  position: absolute;
+  right: 0rem;
+  bottom: 0rem;
+  opacity: 0;
+  z-index: 0;
+  font-size: 1.5rem;
   background-image: linear-gradient(#9356DC, #FF79DA);
-  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-width: 0.06rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: transparent;
 }
-.sign__titles-fav:focus, .sign__titles-fav:active {
-  cursor: pointer;
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-stroke-width: 0;
-  -webkit-text-stroke-color: transparent;
+.sign__titles-fav .heart-2:link, .sign__titles-fav .heart-2:visited, .sign__titles-fav .heart-2:hover, .sign__titles-fav .heart-2:active {
+  opacity: 1;
+  transition: opacity 1.5s;
 }
 
 .menu {
@@ -362,9 +384,9 @@ nav .nav__link:hover {
 }
 .menu__category-1 legend, .menu__category-2 legend, .menu__category-3 legend {
   width: 2.5rem;
-  border-bottom: solid 3px #99E2D0;
+  border-bottom: solid 0.2rem #99E2D0;
   background-color: rgb(245, 245, 245);
-  border-bottom: 3px solid #99E2D0;
+  border-bottom: 0.2rem solid #99E2D0;
   padding: 0.3rem 0 0.4rem;
   margin-bottom: 0.7rem;
 }
@@ -374,7 +396,7 @@ nav .nav__link:hover {
   width: 100%;
   background-color: white;
   border-radius: 0.5rem;
-  box-shadow: 0 5px 10px rgb(225, 225, 225);
+  box-shadow: 0 0.3rem 0.6rem rgb(225, 225, 225);
   padding: 0;
   overflow: hidden;
 }
@@ -438,13 +460,13 @@ nav .nav__link:hover {
   border-radius: 6rem;
   color: white;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  box-shadow: 0 5px 10px #bbbbbb;
+  box-shadow: 0 0.3rem 0.6rem #bbbbbb;
   margin: 2.5rem 0 1.7rem;
   border: none;
 }
 .menu__btn:hover {
   background: linear-gradient(to bottom right, #ffa7e7, #ab7ce4);
-  box-shadow: 0 5px 10px #959595;
+  box-shadow: 0 0.3rem 0.6rem #959595;
 }
 
 /*# sourceMappingURL=style.css.map */
