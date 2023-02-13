@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  min-width: 320px;
+  min-width: 360px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -403,16 +403,10 @@ nav .nav__link:hover {
 .menu__dishes-1 label, .menu__dishes-2 label, .menu__dishes-3 label, .menu__dishes-4 label, .menu__dishes-5 label, .menu__dishes-6 label, .menu__dishes-7 label, .menu__dishes-8 label, .menu__dishes-9 label {
   display: grid;
   width: 100%;
-  grid-template-columns: 80% 20%;
-  grid-template-rows: 50% 50%;
-  padding: 0.8rem 1.2rem 0.8rem 0.8rem;
+  grid-template-columns: 5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 0.8rem 0;
   row-gap: 0.2rem;
-}
-.menu__dishes-1 label:hover + .menu__dishes-choice, .menu__dishes-2 label:hover + .menu__dishes-choice, .menu__dishes-3 label:hover + .menu__dishes-choice, .menu__dishes-4 label:hover + .menu__dishes-choice, .menu__dishes-5 label:hover + .menu__dishes-choice, .menu__dishes-6 label:hover + .menu__dishes-choice, .menu__dishes-7 label:hover + .menu__dishes-choice, .menu__dishes-8 label:hover + .menu__dishes-choice, .menu__dishes-9 label:hover + .menu__dishes-choice {
-  transition: right 2s linear, width 4s;
-  right: 0%;
-  width: 22%;
-  /*test de transition par le changement de width*/
 }
 .menu__dishes-1 label .menu__dishes-name, .menu__dishes-1 label .menu__dishes-detail, .menu__dishes-2 label .menu__dishes-name, .menu__dishes-2 label .menu__dishes-detail, .menu__dishes-3 label .menu__dishes-name, .menu__dishes-3 label .menu__dishes-detail, .menu__dishes-4 label .menu__dishes-name, .menu__dishes-4 label .menu__dishes-detail, .menu__dishes-5 label .menu__dishes-name, .menu__dishes-5 label .menu__dishes-detail, .menu__dishes-6 label .menu__dishes-name, .menu__dishes-6 label .menu__dishes-detail, .menu__dishes-7 label .menu__dishes-name, .menu__dishes-7 label .menu__dishes-detail, .menu__dishes-8 label .menu__dishes-name, .menu__dishes-8 label .menu__dishes-detail, .menu__dishes-9 label .menu__dishes-name, .menu__dishes-9 label .menu__dishes-detail {
   white-space: nowrap; /* passage à la ligne interdit et blancs regroupés*/
@@ -423,10 +417,12 @@ nav .nav__link:hover {
   grid-area: 1/1;
   font-weight: 700;
   font-size: 1.1rem;
+  padding: 0 1rem 0 0.8rem;
 }
 .menu__dishes-1 label .menu__dishes-detail, .menu__dishes-2 label .menu__dishes-detail, .menu__dishes-3 label .menu__dishes-detail, .menu__dishes-4 label .menu__dishes-detail, .menu__dishes-5 label .menu__dishes-detail, .menu__dishes-6 label .menu__dishes-detail, .menu__dishes-7 label .menu__dishes-detail, .menu__dishes-8 label .menu__dishes-detail, .menu__dishes-9 label .menu__dishes-detail {
   grid-area: 2/1;
   font-size: 0.9rem;
+  padding: 0 1rem 0 0.8rem;
 }
 .menu__dishes-1 label .menu__dishes-price, .menu__dishes-2 label .menu__dishes-price, .menu__dishes-3 label .menu__dishes-price, .menu__dishes-4 label .menu__dishes-price, .menu__dishes-5 label .menu__dishes-price, .menu__dishes-6 label .menu__dishes-price, .menu__dishes-7 label .menu__dishes-price, .menu__dishes-8 label .menu__dishes-price, .menu__dishes-9 label .menu__dishes-price {
   grid-area: 2/2;
@@ -434,20 +430,32 @@ nav .nav__link:hover {
   font-weight: 700;
   font-size: 1rem;
   text-align: right;
+  padding-right: 1.2rem;
+}
+.menu__dishes-1 label:hover + .menu__dishes-choice, .menu__dishes-2 label:hover + .menu__dishes-choice, .menu__dishes-3 label:hover + .menu__dishes-choice, .menu__dishes-4 label:hover + .menu__dishes-choice, .menu__dishes-5 label:hover + .menu__dishes-choice, .menu__dishes-6 label:hover + .menu__dishes-choice, .menu__dishes-7 label:hover + .menu__dishes-choice, .menu__dishes-8 label:hover + .menu__dishes-choice, .menu__dishes-9 label:hover + .menu__dishes-choice {
+  transition: width 0.4s linear;
+  width: 20%;
+  justify-content: center;
+}
+.menu__dishes-1 label:hover + .menu__dishes-choice i, .menu__dishes-2 label:hover + .menu__dishes-choice i, .menu__dishes-3 label:hover + .menu__dishes-choice i, .menu__dishes-4 label:hover + .menu__dishes-choice i, .menu__dishes-5 label:hover + .menu__dishes-choice i, .menu__dishes-6 label:hover + .menu__dishes-choice i, .menu__dishes-7 label:hover + .menu__dishes-choice i, .menu__dishes-8 label:hover + .menu__dishes-choice i, .menu__dishes-9 label:hover + .menu__dishes-choice i {
+  transform: rotate(1turn);
+  transition: transform 0.4s ease-in-out;
 }
 .menu__dishes-choice {
-  position: relative;
-  right: -22%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 0%;
   background-color: #99E2D0;
-  /*2nd parti test de transition par la width seule*/
 }
-.menu__dishes-choice input[type=radio].choix {
-  margin: 0;
-  /*test remplacement visuel du bouton radio*/
+.menu__dishes-choice i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.15rem;
+  color: #99E2D0;
+  font-size: 1rem;
+  font-weight: bold;
+  transform: rotate(0turn);
 }
 .menu__btn {
   display: flex;
