@@ -1,4 +1,22 @@
 @charset "UTF-8";
+@keyframes btn-choice-width {
+  0% {
+    width: 0%;
+    justify-content: center;
+  }
+  100% {
+    width: 20%;
+    justify-content: center;
+  }
+}
+@keyframes btn-choice-checked {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -25,9 +43,9 @@ body {
 }
 .header__logo {
   position: relative;
-  width: 45%;
+  width: 44%;
   margin: 0 auto;
-  padding: 1.2rem 0 0.5rem;
+  padding: 1.4rem 0 0.5rem;
 }
 .header__logo img {
   width: 100%;
@@ -90,28 +108,30 @@ nav #localization {
 nav #localization label {
   display: flex;
   gap: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   padding-bottom: 0.06rem;
+  margin-bottom: 0.2rem;
 }
 nav #localization select {
   appearance: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   border: none;
   background: none;
+  margin-bottom: 0.2rem;
 }
 nav h1 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-align: center;
-  margin: 2.3rem 0.5rem 0.2rem;
-  line-height: 110%;
+  margin: 2.5rem 0.5rem 0.3rem;
+  line-height: 115%;
 }
 nav h2 {
   font-size: 1.1rem;
   font-weight: 300;
   text-align: center;
-  margin: 0.4rem 0.5rem 1rem;
+  margin: 0.4rem 0.5rem 0.9rem;
 }
 nav .nav__link {
   display: flex;
@@ -124,25 +144,25 @@ nav .nav__link {
   border-radius: 6rem;
   color: white;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  box-shadow: 0 0.3rem 0.6rem #bbbbbb;
-  margin: 1rem 0.5rem 3.5rem;
+  box-shadow: 0 0.3rem 0.7rem #bbbbbb;
+  margin: 1rem 0.5rem 3.6rem;
 }
 nav .nav__link:hover {
   background: linear-gradient(to bottom right, #ffa7e7, #ab7ce4);
-  box-shadow: 0 0.3rem 0.6rem #959595;
+  box-shadow: 0 0.3rem 0.7rem #959595;
 }
 
 .funct {
-  padding: 2rem 1rem 4.5rem;
+  padding: 1.7rem 1.3rem 4.3rem;
 }
 .funct h2 {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 .funct ul {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.6rem;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -152,18 +172,18 @@ nav .nav__link:hover {
   display: flex;
   align-items: center;
   background-color: rgb(245, 245, 245);
-  height: 4.5rem;
+  height: 4.4rem;
   border-radius: 1.5rem;
-  box-shadow: 0 0.3rem 0.6rem rgb(225, 225, 225);
+  box-shadow: 0 0.3rem 0.7rem rgb(225, 225, 225);
   margin-left: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .funct__list span {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  left: -0.8rem;
+  left: -1rem;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
@@ -173,25 +193,28 @@ nav .nav__link:hover {
   font-weight: 500;
 }
 .funct__list i {
-  margin: 0 1.2rem 0 0.7rem;
+  margin-left: 0.4rem;
+  width: 2.5rem;
   color: #767676;
   font-size: 1.15rem;
 }
 .funct__list--color {
   background-color: #f2eafb;
+  height: 4.5rem;
 }
-.funct__list--color svg {
+.funct__list--color i {
   color: #9356DC;
 }
 
 .rest {
-  padding: 2rem 1.2rem 4rem;
+  padding: 2rem 1.3rem 4rem;
   background-color: rgb(245, 245, 245);
   display: flex;
   flex-direction: column;
 }
 .rest h2 {
   font-size: 1.5rem;
+  margin: 1.3rem 0;
 }
 .rest__list {
   display: flex;
@@ -201,8 +224,9 @@ nav .nav__link:hover {
 .rest__frame {
   position: relative;
   width: 100%;
-  box-shadow: 0 0.3rem 0.6rem rgb(225, 225, 225);
+  box-shadow: 0 0.3rem 0.7rem rgb(225, 225, 225);
   border-radius: 1rem;
+  background-color: white;
 }
 .rest__frame-fig {
   display: flex;
@@ -211,12 +235,12 @@ nav .nav__link:hover {
 }
 .rest__frame-new {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 0.7rem;
+  top: 0.9rem;
   background-color: #99E2D0;
   font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 0.7rem;
   color: #299077;
 }
 .rest__frame-new--inactive {
@@ -238,10 +262,12 @@ nav .nav__link:hover {
   justify-content: space-between;
 }
 .rest__frame-details h3 {
-  margin: 1rem 1rem 0.1rem;
+  margin: 0.9rem 0.8rem 0.1rem;
+  font-size: 1.1rem;
 }
 .rest__frame-details h4 {
-  margin: 0.1rem 1rem 1rem;
+  margin: 0.1rem 0.8rem 1rem;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 .rest__frame-fav {
@@ -259,7 +285,7 @@ nav .nav__link:hover {
   opacity: 1;
   z-index: 0;
   font-size: 1.5rem;
-  background-image: linear-gradient(rgb(245, 245, 245), rgb(245, 245, 245));
+  background-image: linear-gradient(transparent, transparent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0.06rem;
@@ -333,7 +359,7 @@ nav .nav__link:hover {
   opacity: 1;
   z-index: 0;
   font-size: 1.5rem;
-  background-image: linear-gradient(rgb(245, 245, 245), rgb(245, 245, 245));
+  background-image: linear-gradient(transparent, transparent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0.06rem;
@@ -374,6 +400,9 @@ nav .nav__link:hover {
   align-items: center;
 }
 .menu__category-1, .menu__category-2, .menu__category-3 {
+  position: relative;
+  z-index: 0;
+  opacity: 1;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -390,17 +419,18 @@ nav .nav__link:hover {
   padding: 0.3rem 0 0.4rem;
   margin-bottom: 0.7rem;
 }
-.menu__dishes-1, .menu__dishes-2, .menu__dishes-3, .menu__dishes-4, .menu__dishes-5, .menu__dishes-6, .menu__dishes-7, .menu__dishes-8, .menu__dishes-9 {
+.menu__dishes-1, .menu__dishes-2, .menu__dishes-3 {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
   background-color: white;
   border-radius: 0.5rem;
-  box-shadow: 0 0.3rem 0.6rem rgb(225, 225, 225);
+  box-shadow: 0 0.3rem 0.7rem rgb(225, 225, 225);
   padding: 0;
   overflow: hidden;
 }
-.menu__dishes-1 label, .menu__dishes-2 label, .menu__dishes-3 label, .menu__dishes-4 label, .menu__dishes-5 label, .menu__dishes-6 label, .menu__dishes-7 label, .menu__dishes-8 label, .menu__dishes-9 label {
+.menu__dishes-1 label, .menu__dishes-2 label, .menu__dishes-3 label {
   display: grid;
   width: 100%;
   grid-template-columns: 5fr 1fr;
@@ -408,23 +438,23 @@ nav .nav__link:hover {
   padding: 0.8rem 0;
   row-gap: 0.2rem;
 }
-.menu__dishes-1 label .menu__dishes-name, .menu__dishes-1 label .menu__dishes-detail, .menu__dishes-2 label .menu__dishes-name, .menu__dishes-2 label .menu__dishes-detail, .menu__dishes-3 label .menu__dishes-name, .menu__dishes-3 label .menu__dishes-detail, .menu__dishes-4 label .menu__dishes-name, .menu__dishes-4 label .menu__dishes-detail, .menu__dishes-5 label .menu__dishes-name, .menu__dishes-5 label .menu__dishes-detail, .menu__dishes-6 label .menu__dishes-name, .menu__dishes-6 label .menu__dishes-detail, .menu__dishes-7 label .menu__dishes-name, .menu__dishes-7 label .menu__dishes-detail, .menu__dishes-8 label .menu__dishes-name, .menu__dishes-8 label .menu__dishes-detail, .menu__dishes-9 label .menu__dishes-name, .menu__dishes-9 label .menu__dishes-detail {
+.menu__dishes-1 label .menu__dishes-name, .menu__dishes-1 label .menu__dishes-detail, .menu__dishes-2 label .menu__dishes-name, .menu__dishes-2 label .menu__dishes-detail, .menu__dishes-3 label .menu__dishes-name, .menu__dishes-3 label .menu__dishes-detail {
   white-space: nowrap; /* passage à la ligne interdit et blancs regroupés*/
   overflow: hidden; /*le contenu qui dépasse est rogné*/
   text-overflow: ellipsis; /*points de suspension remplacent le texte rogné*/
 }
-.menu__dishes-1 label .menu__dishes-name, .menu__dishes-2 label .menu__dishes-name, .menu__dishes-3 label .menu__dishes-name, .menu__dishes-4 label .menu__dishes-name, .menu__dishes-5 label .menu__dishes-name, .menu__dishes-6 label .menu__dishes-name, .menu__dishes-7 label .menu__dishes-name, .menu__dishes-8 label .menu__dishes-name, .menu__dishes-9 label .menu__dishes-name {
+.menu__dishes-1 label .menu__dishes-name, .menu__dishes-2 label .menu__dishes-name, .menu__dishes-3 label .menu__dishes-name {
   grid-area: 1/1;
   font-weight: 700;
   font-size: 1.1rem;
   padding: 0 1rem 0 0.8rem;
 }
-.menu__dishes-1 label .menu__dishes-detail, .menu__dishes-2 label .menu__dishes-detail, .menu__dishes-3 label .menu__dishes-detail, .menu__dishes-4 label .menu__dishes-detail, .menu__dishes-5 label .menu__dishes-detail, .menu__dishes-6 label .menu__dishes-detail, .menu__dishes-7 label .menu__dishes-detail, .menu__dishes-8 label .menu__dishes-detail, .menu__dishes-9 label .menu__dishes-detail {
+.menu__dishes-1 label .menu__dishes-detail, .menu__dishes-2 label .menu__dishes-detail, .menu__dishes-3 label .menu__dishes-detail {
   grid-area: 2/1;
   font-size: 0.9rem;
   padding: 0 1rem 0 0.8rem;
 }
-.menu__dishes-1 label .menu__dishes-price, .menu__dishes-2 label .menu__dishes-price, .menu__dishes-3 label .menu__dishes-price, .menu__dishes-4 label .menu__dishes-price, .menu__dishes-5 label .menu__dishes-price, .menu__dishes-6 label .menu__dishes-price, .menu__dishes-7 label .menu__dishes-price, .menu__dishes-8 label .menu__dishes-price, .menu__dishes-9 label .menu__dishes-price {
+.menu__dishes-1 label .menu__dishes-price, .menu__dishes-2 label .menu__dishes-price, .menu__dishes-3 label .menu__dishes-price {
   grid-area: 2/2;
   text-align: center;
   font-weight: 700;
@@ -432,14 +462,20 @@ nav .nav__link:hover {
   text-align: right;
   padding-right: 1.2rem;
 }
-.menu__dishes-1 label:hover + .menu__dishes-choice, .menu__dishes-2 label:hover + .menu__dishes-choice, .menu__dishes-3 label:hover + .menu__dishes-choice, .menu__dishes-4 label:hover + .menu__dishes-choice, .menu__dishes-5 label:hover + .menu__dishes-choice, .menu__dishes-6 label:hover + .menu__dishes-choice, .menu__dishes-7 label:hover + .menu__dishes-choice, .menu__dishes-8 label:hover + .menu__dishes-choice, .menu__dishes-9 label:hover + .menu__dishes-choice {
+.menu__dishes-1 label:hover + .menu__dishes-choice, .menu__dishes-2 label:hover + .menu__dishes-choice, .menu__dishes-3 label:hover + .menu__dishes-choice {
   transition: width 0.4s linear;
   width: 20%;
   justify-content: center;
 }
-.menu__dishes-1 label:hover + .menu__dishes-choice i, .menu__dishes-2 label:hover + .menu__dishes-choice i, .menu__dishes-3 label:hover + .menu__dishes-choice i, .menu__dishes-4 label:hover + .menu__dishes-choice i, .menu__dishes-5 label:hover + .menu__dishes-choice i, .menu__dishes-6 label:hover + .menu__dishes-choice i, .menu__dishes-7 label:hover + .menu__dishes-choice i, .menu__dishes-8 label:hover + .menu__dishes-choice i, .menu__dishes-9 label:hover + .menu__dishes-choice i {
+.menu__dishes-1 label:hover + .menu__dishes-choice i, .menu__dishes-2 label:hover + .menu__dishes-choice i, .menu__dishes-3 label:hover + .menu__dishes-choice i {
   transform: rotate(1turn);
   transition: transform 0.4s ease-in-out;
+}
+.menu__dishes-1 label:hover + .menu__dishes-test-animation, .menu__dishes-2 label:hover + .menu__dishes-test-animation, .menu__dishes-3 label:hover + .menu__dishes-test-animation {
+  animation: btn-choice-width 2s;
+}
+.menu__dishes-1 label:hover + .menu__dishes-test-animation i, .menu__dishes-2 label:hover + .menu__dishes-test-animation i, .menu__dishes-3 label:hover + .menu__dishes-test-animation i {
+  animation: btn-choice-checked 2s;
 }
 .menu__dishes-choice {
   display: flex;
@@ -449,6 +485,22 @@ nav .nav__link:hover {
   background-color: #99E2D0;
 }
 .menu__dishes-choice i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.15rem;
+  color: #99E2D0;
+  font-size: 1rem;
+  font-weight: bold;
+  transform: rotate(0turn);
+}
+.menu__dishes-test-animation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 0%;
+  background-color: #99E2D0;
+}
+.menu__dishes-test-animation i {
   background-color: white;
   border-radius: 50%;
   padding: 0.15rem;
@@ -468,13 +520,13 @@ nav .nav__link:hover {
   border-radius: 6rem;
   color: white;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  box-shadow: 0 0.3rem 0.6rem #bbbbbb;
+  box-shadow: 0 0.3rem 0.7rem #bbbbbb;
   margin: 2.5rem 0 1.7rem;
   border: none;
 }
 .menu__btn:hover {
   background: linear-gradient(to bottom right, #ffa7e7, #ab7ce4);
-  box-shadow: 0 0.3rem 0.6rem #959595;
+  box-shadow: 0 0.3rem 0.7rem #959595;
 }
 
 /*# sourceMappingURL=style.css.map */

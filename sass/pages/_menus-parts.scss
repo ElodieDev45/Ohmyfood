@@ -11,6 +11,9 @@
     }
     &__category{
         &-1,&-2,&-3{
+            position: relative;
+            z-index: 0;
+            opacity: 1;
             display: flex;
             flex-direction: column;
             gap: 0.8rem;
@@ -19,6 +22,18 @@
             width: 100%;
             border-style: none;
 
+            // &::before{
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     right: 0;
+            //     bottom: 0;
+            //     left: 0;
+            //     z-index: 1;
+            //     opacity: 1;
+            //     background: $color-backg-sect;
+            // }
+            
             legend{
                 width: 2.5rem;
                 border-bottom:solid .2rem $color-tertiary;
@@ -26,11 +41,13 @@
                 border-bottom: .2rem solid #99E2D0;
                 padding: .3rem 0 .4rem;
                 margin-bottom: 0.7rem;
+                
             }
         }
     }
     &__dishes{
-        &-1,&-2,&-3,&-4,&-5,&-6,&-7,&-8,&-9{
+        &-1,&-2,&-3{
+            position: relative;
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -81,6 +98,14 @@
                     transform: rotate(1turn);
                     transition: transform 0.4s ease-in-out;
                 }
+
+                &:hover + .menu__dishes-test-animation{
+                    animation: btn-choice-width 2s
+                }
+                &:hover + .menu__dishes-test-animation i{
+                    animation: btn-choice-checked 2s;
+                }
+                
             }
         }
         &-choice{
@@ -100,6 +125,24 @@
                 transform: rotate(0turn);
             }
         }
+        &-test-animation{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 0%;
+            background-color: $color-tertiary;
+
+            i{
+                background-color: white;
+                border-radius: 50%;
+                padding: 0.15rem;
+                color: $color-tertiary;
+                font-size: 1rem;
+                font-weight: bold;
+                transform: rotate(0turn);
+            }
+        }
+
     }
 
     &__btn{

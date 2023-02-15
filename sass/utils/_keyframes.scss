@@ -1,0 +1,18 @@
+@keyframes btn-choice-width{
+    0% {
+        width: 0%;
+        justify-content: center;
+    }
+    100% {
+        width: 20%;
+        justify-content: center;
+    }
+}
+@keyframes btn-choice-checked{
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
