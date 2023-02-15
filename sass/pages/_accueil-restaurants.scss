@@ -1,11 +1,12 @@
 .rest{
-    padding: 2rem 1.2rem 4rem;
+    padding: 2rem 1.3rem 4rem;
     background-color: $color-backg-sect;
     display: flex;
     flex-direction: column;
 
     h2{
         @include title-sections;
+        margin:1.3rem 0;
     }
     &__list{
         display: flex;
@@ -17,6 +18,7 @@
         width: 100%;
         @include shadow-frame;
         border-radius: 1rem;
+        background-color: white;
 
         &-fig{
             display: flex;
@@ -25,12 +27,12 @@
         }
         &-new{
             position: absolute;
-            right: 1rem;
-            top: 1rem;
+            right: 0.7rem;
+            top: 0.9rem;
             background-color: $color-tertiary;
             font-size: 0.9rem;
             font-weight: 500;
-            padding: 0.3rem 0.5rem;
+            padding: 0.3rem 0.7rem;
             color: darken($color: $color-tertiary, $amount: 38%);
 
             &--inactive{
@@ -54,10 +56,12 @@
             justify-content: space-between;
             
             h3{
-                margin: 1rem 1rem 0.1rem;
+                margin: 0.9rem 0.8rem 0.1rem;
+                font-size: 1.1rem;
             }
             h4{
-                margin: 0.1rem 1rem 1rem;
+                margin: 0.1rem 0.8rem 1rem;
+                font-size: 1.1rem;
                 font-weight: 300;
             }
         }

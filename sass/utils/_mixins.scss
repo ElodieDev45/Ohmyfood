@@ -1,5 +1,5 @@
 @mixin shadow-frame($color: $color-shadow){
-    box-shadow: 0 0.3rem 0.6rem $color;
+    box-shadow: 0 0.3rem 0.7rem $color;
 }
 @mixin flex-totaly-center{
     justify-content: center ;

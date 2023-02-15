@@ -1,14 +1,14 @@
 .funct{
-    padding: 2rem 1rem 4.5rem;
+    padding: 1.7rem 1.3rem 4.3rem;
 
     h2{
         @include title-sections;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
     }
     ul{
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1.6rem;
         padding: 0;
         margin: 0;
         list-style-type: none;
@@ -18,17 +18,17 @@
         display: flex;
         align-items: center;
         background-color: $color-backg-sect;
-        height: 4.5rem;
+        height: 4.4rem;
         border-radius: 1.5rem;
         @include shadow-frame;
         margin-left: 1rem;
-        font-weight: 600;
+        font-weight: 700;
 
         span{
             display: flex;
             @include flex-totaly-center;
             position: relative;
-            left: -0.8rem;
+            left: -1rem;
             width: 1.5rem;
             height: 1.5rem;
             border-radius: 50%;
@@ -39,7 +39,8 @@
         }
 
         i{
-            margin: 0 1.2rem 0 0.7rem;
+            margin-left: .4rem;
+            width: 2.5rem;
             color: darken($color: $color-backg-sect, $amount: 50%);
             font-size: 1.15rem;
 
@@ -47,8 +48,10 @@
 
         &--color{
             background-color: lighten($color: $color-primary, $amount: 35%);
+            height: 4.5rem;
 
-            svg{
+
+            i{
                 color: $color-primary;
             }
         }
