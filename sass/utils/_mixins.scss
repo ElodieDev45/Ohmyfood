@@ -1,10 +1,24 @@
 @mixin shadow-frame($color: $color-shadow){
     box-shadow: 0 0.3rem 0.7rem $color;
 }
+
 @mixin flex-totaly-center{
     justify-content: center ;
     align-items: center;
 }
+
 @mixin title-sections{
     font-size: 1.5rem;
+}
+
+@mixin tablet-only{
+    @media screen and (min-width: $breakpoint-tab){
+        @content;
+    }
+}
+
+@mixin desktop-only{
+    @media screen and (min-width: $breakpoint-dsk){
+        @content;
+    }
 }

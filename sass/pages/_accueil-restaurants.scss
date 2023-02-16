@@ -7,11 +7,26 @@
     h2{
         @include title-sections;
         margin:1.3rem 0;
+
+        @include tablet-only{
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
     }
     &__list{
         display: flex;
         flex-direction: column;
         gap: 1.1rem;
+
+        @include tablet-only{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include desktop-only{
+            row-gap: 2rem;
+        }
     }
     &__frame{
         position: relative;
@@ -19,6 +34,10 @@
         @include shadow-frame;
         border-radius: 1rem;
         background-color: white;
+
+        @include tablet-only{
+            width: 48%;
+        }
 
         &-fig{
             display: flex;
@@ -49,6 +68,15 @@
             &--vertical{
                 object-position: 0 62%;
             }
+
+            @include tablet-only{
+                height: 12rem;
+            }
+
+            @include desktop-only{
+                height: 18rem;
+            }
+
         }
         &-details{
             display: flex;
@@ -58,11 +86,19 @@
             h3{
                 margin: 0.9rem 0.8rem 0.1rem;
                 font-size: 1.1rem;
+
+                @include desktop-only{
+                    margin: 1.3rem 0.8rem 0.2rem;
+                }
             }
             h4{
                 margin: 0.1rem 0.8rem 1rem;
                 font-size: 1.1rem;
                 font-weight: 300;
+
+                @include desktop-only{
+                    margin: 0.2rem 0.8rem 1.4rem;
+                }
             }
         }
         @include heart;

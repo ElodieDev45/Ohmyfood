@@ -3,9 +3,24 @@ footer{
     margin: 0;
     padding: 0.7rem 1.5rem;
 
+    @include desktop-only{
+        height: 10rem;
+    }
+
+    p{
+        @include tablet-only{
+        text-align: center;
+    }
+
     img{
         width: 6rem;
         filter: invert(100%);
+
+        @include desktop-only{
+            width: 8rem;
+        }
+
+        }
     }
 
     ul{
@@ -13,6 +28,17 @@ footer{
         margin: 1rem 0 1.5rem;
         padding: 0;
         font-weight: 300;
+        
+        @include tablet-only{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        @include desktop-only{
+            margin: 2rem 0;
+            padding: 0;
+        }
 
         a{
             display: flex;
@@ -20,10 +46,40 @@ footer{
             color: #fff;
             margin-bottom: 0.5rem;
 
+            br{
+                display: none;
+
+                @include tablet-only{
+                    display: initial;
+                }
+                @include desktop-only{
+                    display: none;
+                }
+            }
+            
+            @include tablet-only{
+                position: relative;
+                // left: 1.3rem;
+                // align-items: flex-start;
+                padding-top: 0.1rem;
+                width: max-content;
+                margin: auto;
+            }
+
             i{
                 font-size: 0.8rem;
                 width: 1.3rem;
                 padding-right: 0.5rem;
+
+                @include tablet-only{
+                    position: relative;
+                    top: -0.5rem;
+                    padding-top: 0.2rem;
+                }
+
+                @include desktop-only{
+                    top: initial;
+                }
             }
         }
     }

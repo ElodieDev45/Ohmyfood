@@ -4,12 +4,26 @@
     position: relative;
     height: 17.5rem;
 
+    @include tablet-only{
+        height: 22rem;
+    }
+    @include desktop-only{
+        height: 26rem;
+    }
+
     &__picture{
         position: relative;
         height: 100%;
         width: 100%;
         object-fit: cover;
         object-position: top;
+
+        @include tablet-only{
+            object-position: center;
+        }
+        @include desktop-only{
+            object-position: 0 60%;
+        }
 
         &--vertical{
             object-position: 0 62%;
@@ -28,8 +42,17 @@
             @include titles;
             font-size: 1.8rem;
             font-weight: 500;
-            padding-left:1rem;
+            padding-left: 1rem;
             margin: 2rem 0 0rem;
+
+            @include tablet-only{
+                padding-left: 2rem;
+            }
+
+            @include desktop-only{
+                padding-left: 0;
+                text-align: center;
+            }
         }
         
         @include heart ($bottom:0.7rem, $right:2.5rem);

@@ -8,6 +8,13 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+
+        @include desktop-only{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 3fr 1fr;
+            column-gap: 1.3rem;
+        }
     }
     &__category{
         &-1,&-2,&-3{
@@ -21,19 +28,22 @@
             margin: 2.2rem 0 0 0;
             width: 100%;
             border-style: none;
-
-            // &::before{
-            //     content: "";
-            //     position: absolute;
-            //     top: 0;
-            //     right: 0;
-            //     bottom: 0;
-            //     left: 0;
-            //     z-index: 1;
-            //     opacity: 1;
-            //     background: $color-backg-sect;
-            // }
+            overflow: hidden;
             
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                opacity: 0;
+                background: $color-backg-sect;
+                /*animation du fond à opacité dégressive complément animations catégories et plats (1 à 3)*/
+                animation: progress_appearance 2s;
+            }
+
             legend{
                 width: 2.5rem;
                 border-bottom:solid .2rem $color-tertiary;
@@ -41,7 +51,22 @@
                 border-bottom: .2rem solid #99E2D0;
                 padding: .3rem 0 .4rem;
                 margin-bottom: 0.7rem;
-                
+            }
+        }
+        /*animation de l'arrivée des catégories de plats (1 à 3) uniquement desktop*/
+        &-1{
+            @include desktop-only{
+                animation: category_movement 1s;
+            }
+        }
+        &-2{
+            @include desktop-only{
+                animation: category_movement 2s;
+            }
+        }
+        &-3{
+            @include desktop-only{
+                animation: category_movement 3s;
             }
         }
     }
@@ -56,7 +81,7 @@
             @include shadow-frame;
             padding: 0;
             overflow: hidden;
-
+            
             label{
                 display: grid;
                 width:100%;
@@ -64,6 +89,11 @@
                 grid-template-rows: 1fr 1fr;
                 padding: .8rem 0;
                 row-gap: 0.2rem;
+
+                @include desktop-only{
+                    padding: 1.2rem 0;
+                    row-gap: 0.5rem;
+                }
 
                 .menu__dishes-name, .menu__dishes-detail{
                     white-space: nowrap;/* passage à la ligne interdit et blancs regroupés*/
@@ -98,16 +128,28 @@
                     transform: rotate(1turn);
                     transition: transform 0.4s ease-in-out;
                 }
-
-                &:hover + .menu__dishes-test-animation{
-                    animation: btn-choice-width 2s
-                }
-                &:hover + .menu__dishes-test-animation i{
-                    animation: btn-choice-checked 2s;
-                }
-                
             }
         }
+        /*animation de l'arrivée des plats (1 à 3) mobile et tablet*/
+        &-1{
+            animation: dishes_movement 500ms;
+            @include desktop-only{
+                animation: none;
+            }
+        }
+        &-2{
+            animation: dishes_movement 1000ms;
+            @include desktop-only{
+                animation: none;
+            }
+        }
+        &-3{
+            animation: dishes_movement 1500ms;
+            @include desktop-only{
+                animation: none;
+            }
+        }
+
         &-choice{
             display: flex;
             justify-content: flex-start;
@@ -125,24 +167,6 @@
                 transform: rotate(0turn);
             }
         }
-        &-test-animation{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 0%;
-            background-color: $color-tertiary;
-
-            i{
-                background-color: white;
-                border-radius: 50%;
-                padding: 0.15rem;
-                color: $color-tertiary;
-                font-size: 1rem;
-                font-weight: bold;
-                transform: rotate(0turn);
-            }
-        }
-
     }
 
     &__btn{
@@ -153,6 +177,12 @@
         &:hover{
             background: linear-gradient(to bottom right, lighten($color-secondary, 9), lighten($color-primary, 9));
             @include shadow-frame($color:darken($color-shadow, 30));
+        }
+
+        @include desktop-only{
+            grid-column: 2/2;
+            min-width: 16rem;
+            margin: auto;
         }
     }
 }

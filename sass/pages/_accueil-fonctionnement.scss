@@ -1,9 +1,19 @@
 .funct{
     padding: 1.7rem 1.3rem 4.3rem;
 
+    @include tablet-only{
+        padding-top: 2rem;
+        padding-bottom: 4rem
+    }
+
     h2{
         @include title-sections;
         margin-bottom: 2rem;
+
+        @include tablet-only{
+            text-align: center;
+            margin-top: 0;
+        }
     }
     ul{
         display: flex;
@@ -12,6 +22,11 @@
         padding: 0;
         margin: 0;
         list-style-type: none;
+
+        @include tablet-only{
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
     &__list{
         position: relative;
@@ -23,6 +38,11 @@
         @include shadow-frame;
         margin-left: 1rem;
         font-weight: 700;
+        padding-right: 1rem;
+
+        @include tablet-only{
+            width: 30%;
+        }
 
         span{
             display: flex;

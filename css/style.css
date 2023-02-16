@@ -1,22 +1,37 @@
 @charset "UTF-8";
-@keyframes btn-choice-width {
+@keyframes progress_appearance {
   0% {
-    width: 0%;
-    justify-content: center;
+    opacity: 1;
+    transform: scaleY(1.1);
+    z-index: 1;
   }
   100% {
-    width: 20%;
-    justify-content: center;
+    opacity: 0;
+    transform: scaleY(1);
+    z-index: -1;
   }
 }
-@keyframes btn-choice-checked {
-  from {
-    transform: rotate(0turn);
+@keyframes dishes_movement {
+  0% {
+    opacity: 0;
+    top: 3rem;
   }
-  to {
-    transform: rotate(1turn);
+  100% {
+    opacity: 1;
+    top: 0rem;
   }
 }
+@keyframes category_movement {
+  0% {
+    opacity: 0;
+    right: -20rem;
+  }
+  100% {
+    opacity: 1;
+    right: 0rem;
+  }
+}
+/*possibilité d'animation des "menu__dishes-choice" à la place des transitions.*/
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -35,11 +50,13 @@ body {
   min-width: 360px;
   max-width: 1400px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .header {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .header__logo {
   position: relative;
@@ -50,13 +67,52 @@ body {
 .header__logo img {
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .header__logo {
+    width: 36%;
+    padding: 1.6rem 0 0.7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__logo {
+    padding: 2.5rem 0 1.6rem;
+  }
+}
 .header__arrow {
-  position: absolute;
+  position: relative;
   left: 1.5rem;
+  top: 0.3rem;
   font-size: 0;
+  width: 0;
+}
+@media screen and (min-width: 768px) {
+  .header__arrow {
+    left: 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__arrow {
+    left: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__arrow:hover {
+    color: #99E2D0;
+    transition: color 0.2s;
+  }
 }
 .header__arrow i {
   font-size: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  .header__arrow i {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__arrow i {
+    font-size: 2rem;
+  }
 }
 
 footer {
@@ -64,9 +120,24 @@ footer {
   margin: 0;
   padding: 0.7rem 1.5rem;
 }
-footer img {
+@media screen and (min-width: 1024px) {
+  footer {
+    height: 10rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer p {
+    text-align: center;
+  }
+}
+footer p img {
   width: 6rem;
   filter: invert(100%);
+}
+@media screen and (min-width: 1024px) {
+  footer p img {
+    width: 8rem;
+  }
 }
 footer ul {
   list-style-type: none;
@@ -74,16 +145,62 @@ footer ul {
   padding: 0;
   font-weight: 300;
 }
+@media screen and (min-width: 768px) {
+  footer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer ul {
+    margin: 2rem 0;
+    padding: 0;
+  }
+}
 footer ul a {
   display: flex;
   align-items: center;
   color: #fff;
   margin-bottom: 0.5rem;
 }
+footer ul a br {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  footer ul a br {
+    display: initial;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer ul a br {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer ul a {
+    position: relative;
+    padding-top: 0.1rem;
+    width: max-content;
+    margin: auto;
+  }
+}
 footer ul a i {
   font-size: 0.8rem;
   width: 1.3rem;
   padding-right: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  footer ul a i {
+    position: relative;
+    top: -0.5rem;
+    padding-top: 0.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer ul a i {
+    top: initial;
+  }
 }
 
 nav {
@@ -92,6 +209,22 @@ nav {
   align-items: center;
   width: 100%;
   background-color: rgb(245, 245, 245);
+}
+@media screen and (min-width: 768px) {
+  nav {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1.5fr 2fr;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav {
+    grid-template-columns: 1.2fr 3fr 1.2fr;
+    grid-template-rows: 1fr 1.2fr;
+    padding-bottom: 0;
+    column-gap: 0.3rem;
+  }
 }
 nav #localization {
   display: flex;
@@ -105,6 +238,24 @@ nav #localization {
   width: 100%;
   height: 2.9rem;
 }
+@media screen and (min-width: 768px) {
+  nav #localization {
+    grid-column: 1/4;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav #localization {
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: initial;
+    grid-row: 1/3;
+    width: auto;
+    height: 10rem;
+    padding-left: 3rem;
+    border-top: none;
+    background-image: linear-gradient(90deg, #e8e8e8 98%, #c2c2c2 100%);
+  }
+}
 nav #localization label {
   display: flex;
   gap: 1rem;
@@ -112,6 +263,19 @@ nav #localization label {
   font-weight: bold;
   padding-bottom: 0.06rem;
   margin-bottom: 0.2rem;
+}
+@media screen and (min-width: 1024px) {
+  nav #localization label {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav #localization label i {
+    position: relative;
+    top: 1rem;
+    left: -0.4rem;
+    font-size: 1.7rem;
+  }
 }
 nav #localization select {
   appearance: none;
@@ -121,17 +285,60 @@ nav #localization select {
   background: none;
   margin-bottom: 0.2rem;
 }
+@media screen and (min-width: 1024px) {
+  nav #localization select {
+    font-size: 1.25rem;
+    margin-left: 2.2rem;
+  }
+}
 nav h1 {
   font-size: 1.5rem;
   text-align: center;
   margin: 2.5rem 0.5rem 0.3rem;
   line-height: 115%;
 }
+@media screen and (min-width: 768px) {
+  nav h1 {
+    grid-column: 1/4;
+    position: relative;
+    top: 1rem;
+    margin: auto;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav h1 {
+    grid-column: 2/2;
+    position: initial;
+    margin: auto 2rem 0.6rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav h1 br {
+    display: none;
+  }
+}
 nav h2 {
   font-size: 1.1rem;
   font-weight: 300;
   text-align: center;
-  margin: 0.4rem 0.5rem 0.9rem;
+  margin: 0.6rem 0.5rem 0.9rem;
+}
+@media screen and (min-width: 768px) {
+  nav h2 {
+    grid-column: 1/3;
+    margin: auto;
+    line-height: 125%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav h2 {
+    grid-column: 2/2;
+    grid-row: 2/3;
+    margin: 0.3rem 2rem auto;
+    line-height: 150%;
+    font-weight: 400;
+  }
 }
 nav .nav__link {
   display: flex;
@@ -147,6 +354,21 @@ nav .nav__link {
   box-shadow: 0 0.3rem 0.7rem #bbbbbb;
   margin: 1rem 0.5rem 3.6rem;
 }
+@media screen and (min-width: 768px) {
+  nav .nav__link {
+    grid-column: 3/4;
+    margin: auto;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav .nav__link {
+    grid-row: 1/3;
+    min-width: 4rem;
+    max-width: 14rem;
+    margin: auto;
+  }
+}
 nav .nav__link:hover {
   background: linear-gradient(to bottom right, #ffa7e7, #ab7ce4);
   box-shadow: 0 0.3rem 0.7rem #959595;
@@ -155,9 +377,21 @@ nav .nav__link:hover {
 .funct {
   padding: 1.7rem 1.3rem 4.3rem;
 }
+@media screen and (min-width: 768px) {
+  .funct {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+}
 .funct h2 {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .funct h2 {
+    text-align: center;
+    margin-top: 0;
+  }
 }
 .funct ul {
   display: flex;
@@ -166,6 +400,12 @@ nav .nav__link:hover {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+@media screen and (min-width: 768px) {
+  .funct ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .funct__list {
   position: relative;
@@ -177,6 +417,12 @@ nav .nav__link:hover {
   box-shadow: 0 0.3rem 0.7rem rgb(225, 225, 225);
   margin-left: 1rem;
   font-weight: 700;
+  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .funct__list {
+    width: 30%;
+  }
 }
 .funct__list span {
   display: flex;
@@ -216,10 +462,29 @@ nav .nav__link:hover {
   font-size: 1.5rem;
   margin: 1.3rem 0;
 }
+@media screen and (min-width: 768px) {
+  .rest h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
 .rest__list {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
+}
+@media screen and (min-width: 768px) {
+  .rest__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rest__list {
+    row-gap: 2rem;
+  }
 }
 .rest__frame {
   position: relative;
@@ -227,6 +492,11 @@ nav .nav__link:hover {
   box-shadow: 0 0.3rem 0.7rem rgb(225, 225, 225);
   border-radius: 1rem;
   background-color: white;
+}
+@media screen and (min-width: 768px) {
+  .rest__frame {
+    width: 48%;
+  }
 }
 .rest__frame-fig {
   display: flex;
@@ -256,6 +526,16 @@ nav .nav__link:hover {
 .rest__frame-picture--vertical {
   object-position: 0 62%;
 }
+@media screen and (min-width: 768px) {
+  .rest__frame-picture {
+    height: 12rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rest__frame-picture {
+    height: 18rem;
+  }
+}
 .rest__frame-details {
   display: flex;
   flex-direction: column;
@@ -265,10 +545,20 @@ nav .nav__link:hover {
   margin: 0.9rem 0.8rem 0.1rem;
   font-size: 1.1rem;
 }
+@media screen and (min-width: 1024px) {
+  .rest__frame-details h3 {
+    margin: 1.3rem 0.8rem 0.2rem;
+  }
+}
 .rest__frame-details h4 {
   margin: 0.1rem 0.8rem 1rem;
   font-size: 1.1rem;
   font-weight: 300;
+}
+@media screen and (min-width: 1024px) {
+  .rest__frame-details h4 {
+    margin: 0.2rem 0.8rem 1.4rem;
+  }
 }
 .rest__frame-fav {
   position: absolute;
@@ -319,12 +609,32 @@ nav .nav__link:hover {
   position: relative;
   height: 17.5rem;
 }
+@media screen and (min-width: 768px) {
+  .sign {
+    height: 22rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sign {
+    height: 26rem;
+  }
+}
 .sign__picture {
   position: relative;
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: top;
+}
+@media screen and (min-width: 768px) {
+  .sign__picture {
+    object-position: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sign__picture {
+    object-position: 0 60%;
+  }
 }
 .sign__picture--vertical {
   object-position: 0 62%;
@@ -343,6 +653,17 @@ nav .nav__link:hover {
   font-weight: 500;
   padding-left: 1rem;
   margin: 2rem 0 0rem;
+}
+@media screen and (min-width: 768px) {
+  .sign__titles-name {
+    padding-left: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sign__titles-name {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 .sign__titles-fav {
   position: absolute;
@@ -399,6 +720,17 @@ nav .nav__link:hover {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 1024px) {
+  .menu form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    column-gap: 1.3rem;
+  }
+}
+.menu__category {
+  /*animation de l'arrivée des catégories de plats (1 à 3) uniquement desktop*/
+}
 .menu__category-1, .menu__category-2, .menu__category-3 {
   position: relative;
   z-index: 0;
@@ -410,6 +742,20 @@ nav .nav__link:hover {
   margin: 2.2rem 0 0 0;
   width: 100%;
   border-style: none;
+  overflow: hidden;
+}
+.menu__category-1::before, .menu__category-2::before, .menu__category-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  background: rgb(245, 245, 245);
+  /*animation du fond à opacité dégressive complément animations catégories et plats (1 à 3)*/
+  animation: progress_appearance 2s;
 }
 .menu__category-1 legend, .menu__category-2 legend, .menu__category-3 legend {
   width: 2.5rem;
@@ -418,6 +764,24 @@ nav .nav__link:hover {
   border-bottom: 0.2rem solid #99E2D0;
   padding: 0.3rem 0 0.4rem;
   margin-bottom: 0.7rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu__category-1 {
+    animation: category_movement 1s;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu__category-2 {
+    animation: category_movement 2s;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu__category-3 {
+    animation: category_movement 3s;
+  }
+}
+.menu__dishes {
+  /*animation de l'arrivée des plats (1 à 3) mobile et tablet*/
 }
 .menu__dishes-1, .menu__dishes-2, .menu__dishes-3 {
   position: relative;
@@ -437,6 +801,12 @@ nav .nav__link:hover {
   grid-template-rows: 1fr 1fr;
   padding: 0.8rem 0;
   row-gap: 0.2rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu__dishes-1 label, .menu__dishes-2 label, .menu__dishes-3 label {
+    padding: 1.2rem 0;
+    row-gap: 0.5rem;
+  }
 }
 .menu__dishes-1 label .menu__dishes-name, .menu__dishes-1 label .menu__dishes-detail, .menu__dishes-2 label .menu__dishes-name, .menu__dishes-2 label .menu__dishes-detail, .menu__dishes-3 label .menu__dishes-name, .menu__dishes-3 label .menu__dishes-detail {
   white-space: nowrap; /* passage à la ligne interdit et blancs regroupés*/
@@ -471,11 +841,29 @@ nav .nav__link:hover {
   transform: rotate(1turn);
   transition: transform 0.4s ease-in-out;
 }
-.menu__dishes-1 label:hover + .menu__dishes-test-animation, .menu__dishes-2 label:hover + .menu__dishes-test-animation, .menu__dishes-3 label:hover + .menu__dishes-test-animation {
-  animation: btn-choice-width 2s;
+.menu__dishes-1 {
+  animation: dishes_movement 500ms;
 }
-.menu__dishes-1 label:hover + .menu__dishes-test-animation i, .menu__dishes-2 label:hover + .menu__dishes-test-animation i, .menu__dishes-3 label:hover + .menu__dishes-test-animation i {
-  animation: btn-choice-checked 2s;
+@media screen and (min-width: 1024px) {
+  .menu__dishes-1 {
+    animation: none;
+  }
+}
+.menu__dishes-2 {
+  animation: dishes_movement 1000ms;
+}
+@media screen and (min-width: 1024px) {
+  .menu__dishes-2 {
+    animation: none;
+  }
+}
+.menu__dishes-3 {
+  animation: dishes_movement 1500ms;
+}
+@media screen and (min-width: 1024px) {
+  .menu__dishes-3 {
+    animation: none;
+  }
 }
 .menu__dishes-choice {
   display: flex;
@@ -485,22 +873,6 @@ nav .nav__link:hover {
   background-color: #99E2D0;
 }
 .menu__dishes-choice i {
-  background-color: white;
-  border-radius: 50%;
-  padding: 0.15rem;
-  color: #99E2D0;
-  font-size: 1rem;
-  font-weight: bold;
-  transform: rotate(0turn);
-}
-.menu__dishes-test-animation {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 0%;
-  background-color: #99E2D0;
-}
-.menu__dishes-test-animation i {
   background-color: white;
   border-radius: 50%;
   padding: 0.15rem;
@@ -527,6 +899,13 @@ nav .nav__link:hover {
 .menu__btn:hover {
   background: linear-gradient(to bottom right, #ffa7e7, #ab7ce4);
   box-shadow: 0 0.3rem 0.7rem #959595;
+}
+@media screen and (min-width: 1024px) {
+  .menu__btn {
+    grid-column: 2/2;
+    min-width: 16rem;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
