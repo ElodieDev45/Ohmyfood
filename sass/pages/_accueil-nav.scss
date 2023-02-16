@@ -7,15 +7,19 @@ nav{
     
     @include tablet-only{
         display: grid;
-        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-columns: 2fr 1.5fr 1.5fr;
         grid-template-rows: 1fr 1.5fr 2fr;
         padding-bottom: 1rem;
     }
     @include desktop-only{
         grid-template-columns: 1.2fr 3fr 1.2fr;
-        grid-template-rows: 1fr 1.2fr;
+        grid-template-rows: 1fr 1fr;
         padding-bottom: 0;
         column-gap: 0.3rem;
+        background-color: white;
+        background-blend-mode: exclusion;
+        background-image: url("../../images/restaurants/fonds/2.jpg");
+        background-size: cover;
     }
     
     
@@ -39,10 +43,11 @@ nav{
             grid-column: initial;
             grid-row: 1/3;
             width: auto;
-            height: 10rem;
+            height: 16rem;
             padding-left: 3rem;
             border-top: none;
-            background-image: linear-gradient(90deg, darken($color-backg-sect, 5%) 98%, darken($color-backg-sect, 20%) 100%);
+            background-color: rgba(0, 0, 0, 0.4);
+            color: $color-tertiary;
         }
         
         label{
@@ -53,16 +58,20 @@ nav{
             padding-bottom: 0.06rem;
             margin-bottom: 0.2rem;
 
+            @include tablet-only{
+                font-size: 1.2rem;
+            }
+
             @include desktop-only{
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
 
             i{
                 @include desktop-only{
                     position: relative;
-                    top: 1rem;
+                    top: 1.6rem;
                     left: -0.4rem;
-                    font-size: 1.7rem;
+                    font-size: 1.6rem;
                 }
             }
         }
@@ -74,9 +83,16 @@ nav{
             background: none;
             margin-bottom: 0.2rem;
 
+            @include tablet-only{
+                font-size: 1.2rem;
+            }
+
             @include desktop-only{
-                font-size: 1.25rem;
+                font-size: 1.6rem;
+                font-weight: 500;
                 margin-left: 2.2rem;
+                color: $color-tertiary;
+
             }
         }
     }
@@ -87,22 +103,32 @@ nav{
         line-height: 115%;
 
         @include tablet-only{
-            grid-column: 1/4;
+            grid-column: 1/3;
             position: relative;
             top: 1rem;
             margin: auto;
             text-align: center;
-
+            font-size: 1.7rem;
         }
         @include desktop-only{
             grid-column: 2/2;
             position: initial;
             margin: auto 2rem 0.6rem;
+            font-size: 2.2rem ;
+            font-weight: 900;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: lighten($color: $color-secondary, $amount: 15);
+            -webkit-text-stroke-width: 0.06rem;
+            -webkit-text-stroke-color: transparent;
+
         }
 
         br{
             @include tablet-only{
                 display: none;
+            }
+            @include desktop-only{
+                display: initial;
             }
         }
     }
@@ -116,13 +142,19 @@ nav{
             grid-column: 1/3;
             margin: auto;
             line-height: 125%;
+            font-size: 1.3rem;
         }
         @include desktop-only{
             grid-column: 2/2;
             grid-row: 2/3;
             margin: 0.3rem 2rem auto;
             line-height: 150%;
-            font-weight: 400;
+            font-size: 1.6rem;
+            font-weight: 700;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke-width: 0.03rem;
+            -webkit-text-stroke-color: transparent;
         }
     }
     .nav__link{
@@ -131,6 +163,7 @@ nav{
         
         @include tablet-only{
             grid-column: 3/4;
+            grid-row: 2/4;
             margin: auto;
             text-align: center;
         }
@@ -139,6 +172,7 @@ nav{
             min-width: 4rem;
             max-width: 14rem;
             margin: auto;
+            @include btn($FontSize:1.2rem);
         }
 
         &:hover{

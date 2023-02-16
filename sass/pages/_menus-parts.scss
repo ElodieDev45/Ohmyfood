@@ -105,11 +105,19 @@
                     font-weight: 700;
                     font-size: 1.1rem;
                     padding: 0 1rem 0 0.8rem;
+
+                    @include desktop-only{
+                        font-size: 1.2rem;
+                    }
                 }
                 .menu__dishes-detail{
                     grid-area: 2 / 1;
                     font-size: 0.9rem;
                     padding: 0 1rem 0 0.8rem;
+
+                    @include desktop-only{
+                        font-size: 1rem;
+                    }
                 }
                 .menu__dishes-price{
                     grid-area: 2 / 2;
@@ -118,6 +126,10 @@
                     font-size: 1rem;
                     text-align: right;
                     padding-right: 1.2rem;
+
+                    @include desktop-only{
+                        font-size: 1.1rem;
+                    }
                 }
                 &:hover + .menu__dishes-choice{
                     transition: width 0.4s linear;
