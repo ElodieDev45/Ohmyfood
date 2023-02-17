@@ -1,4 +1,4 @@
-body{
+.container{
     .loader{
         background: white;
         position: fixed;
@@ -12,12 +12,11 @@ body{
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        // transform: display(none);
-        // transition: transform 3;
-        animation: loader_disparition 6s;
-    
-        display: none;
-    
+        
+        animation: loader_disparition 30s;
+
+        // display: none;
+   
         p{
             display: flex;
             z-index: 100;
@@ -28,18 +27,13 @@ body{
             border-radius: 50%;
             border: solid 8px $color-tertiary;
             color: white;
-            width: 10rem;
-            height: 10rem;
+            width: 9rem;
+            height: 9rem;
             line-height: 85%;
             background-image: radial-gradient(at 10% 25%, darken($color-primary, 10), lighten($color-secondary, 10));
-            // width: 12rem;
-            // height: 12rem;
-        // br{
-        //     display: none;
-        // }
         }
     
-        .fa-utensils{
+        i{
             position: absolute;
             z-index: 90;
             border: solid 1px;
@@ -51,28 +45,21 @@ body{
             align-items: center;
             border-radius: 50%;
             color: white;
+            
+            animation: loader_spinner 3s linear;
+            animation-iteration-count: 3;
         }
-    
-        &_C1{
+        .loader_C1{
             background-color: $color-primary;
-            animation: loader_spinner 3s linear;
             animation-delay: 0ms;
-            animation-iteration-count: 3;
-            animation-play-state: running;
         }
-        &_C2{
+        .loader_C2{
             background-color: $color-secondary;
-            animation: loader_spinner 3s linear;
             animation-delay: 200ms;
-            animation-iteration-count: 3;
-            animation-play-state: running;
         }
-        &_C3{
+        .loader_C3{
             background-color: $color-tertiary;
-            animation: loader_spinner 3s linear;
             animation-delay: 400ms;
-            animation-iteration-count: 3;
-            animation-play-state: running;
         }
     }
 } 

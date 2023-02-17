@@ -58,31 +58,32 @@
 
 @keyframes loader_spinner{
     0%{
-        transform: rotate(-1turn) translate(-9rem) scale(0.4);
+        transform: rotate(-1turn) translate(8rem) scale(0);
     }
     25%{
-        transform: rotate(-0.5turn) translate(-9rem) scale(1.0);
+        transform: rotate(-0.5turn) translate(8rem) scale(0.7);
     }
     50%{
-        transform: rotate(0turn) translate(-9rem)scale(1.4);
+        transform: rotate(0turn) translate(8rem) scale(1.2);
     }
     75%{
-        transform: rotate(0.5turn) translate(-9rem) scale(0.8);
+        transform: rotate(0.5turn) translate(8rem) scale(0.5);
     }
     100%{
-        transform: rotate(1turn) translate(-9rem) scale(0.3);
+        transform: rotate(1turn) translate(8rem) scale(0.2);
     }
 }
 
 @keyframes loader_disparition{
-    0%{
+    4%{
         opacity: 1;
     }
-    99%{
+    10%{
         opacity: 0;
+        z-index: -1;
     }
     100%{
-        display: none;
+        z-index: -1;
     }
 }
 
