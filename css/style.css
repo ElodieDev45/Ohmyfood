@@ -32,6 +32,57 @@
     right: 0rem;
   }
 }
+@keyframes spinner_vertical {
+  0% {
+    transform: rotate(0turn);
+    top: 0rem;
+    transform: scale(50%);
+  }
+  33% {
+    transform: rotate(0.5turn);
+    top: 6rem;
+  }
+  50% {
+    transform: scale(150%);
+  }
+  66% {
+    transform: rotate(1.5turn);
+    top: -6rem;
+  }
+  100% {
+    transform: rotate(2turn);
+    top: 0rem;
+    transform: scale(50%);
+  }
+}
+@keyframes loader_spinner {
+  0% {
+    transform: rotate(-1turn) translate(-10rem) scale(0.5);
+  }
+  25% {
+    transform: rotate(-0.5turn) translate(-10rem) scale(1.1);
+  }
+  50% {
+    transform: rotate(0turn) translate(-10rem) scale(1.5);
+  }
+  75% {
+    transform: rotate(0.5turn) translate(-10rem) scale(0.9);
+  }
+  100% {
+    transform: rotate(1turn) translate(-10rem) scale(0.4);
+  }
+}
+@keyframes loader_disparition {
+  0% {
+    z-index: 1000;
+  }
+  99% {
+    z-index: -1000;
+  }
+  100% {
+    display: none;
+  }
+}
 /*possibilité d'animation des "menu__dishes-choice" à la place des transitions.*/
 html {
   font-family: "Roboto", sans-serif;
@@ -45,6 +96,68 @@ a {
 body {
   margin: 0;
   letter-spacing: normal;
+}
+
+.loader {
+  background: white;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  animation: progress_appearance 3s;
+}
+.loader p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: solid 8px #99E2D0;
+  color: white;
+  width: 12rem;
+  height: 12rem;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+}
+.loader .fa-utensils {
+  position: absolute;
+  border: solid 1px;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+}
+.loader_C1 {
+  background-color: #9356DC;
+  animation: loader_spinner 3s linear;
+  animation-delay: 0ms;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+.loader_C2 {
+  background-color: #FF79DA;
+  animation: loader_spinner 3s linear;
+  animation-delay: 350ms;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+.loader_C3 {
+  background-color: #99E2D0;
+  animation: loader_spinner 3s linear;
+  animation-delay: 700ms;
+  animation-iteration-count: 1;
+  animation-play-state: running;
 }
 
 .container {
