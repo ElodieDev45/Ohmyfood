@@ -40,11 +40,11 @@ nav{
             grid-row: 1/3;
             width: auto;
             height: 16rem;
-            padding-left: 3rem;
+            padding-left: 2rem;
             border-top: none;
         }
         @include desktop-only-big{
-            padding-left: 8rem;
+            padding-left: 6rem;
         }
         
         label{

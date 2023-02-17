@@ -62,6 +62,8 @@
             position: relative;
             left: -1rem;
             width: 1.5rem;
+            min-width: 1.5rem;
+            max-width: 1.5rem;
             height: 1.5rem;
             border-radius: 50%;
             background-color: $color-primary;
@@ -72,12 +74,16 @@
             @include tablet-only{
                 font-size: 1.2rem;
                 width: 1.7rem;
+                min-width: 1.7rem;
+                max-width: 1.7rem;
                 height: 1.7rem;
             }
 
             @include desktop-only{
                 font-size: 1.4rem;
                 width: 2.2rem;
+                min-width: 2.2rem;
+                max-width: 2.2rem;
                 height: 2.2rem;
             }
         }
