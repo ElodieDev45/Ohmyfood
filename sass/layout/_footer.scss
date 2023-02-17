@@ -17,7 +17,7 @@ footer{
         filter: invert(100%);
 
         @include desktop-only{
-            width: 8rem;
+            width: 9rem;
         }
 
         }
@@ -40,6 +40,18 @@ footer{
             padding: 0;
         }
 
+        @include desktop-only-big{
+            display: initial;
+            display: grid;
+            grid-template-columns: 15% 15%;
+            grid-template-rows: 1fr 1fr;
+            justify-content: flex-start;
+            column-gap: 3rem;
+            row-gap: 1rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
         a{
             display: flex;
             align-items: center;
@@ -59,11 +71,14 @@ footer{
             
             @include tablet-only{
                 position: relative;
-                // left: 1.3rem;
-                // align-items: flex-start;
                 padding-top: 0.1rem;
                 width: max-content;
                 margin: auto;
+            }
+
+            @include desktop-only-big{
+                margin: 0;
+                font-size: 1.2rem;
             }
 
             i{

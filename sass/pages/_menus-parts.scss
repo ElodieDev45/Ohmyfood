@@ -10,6 +10,10 @@
         align-items: center;
 
         @include desktop-only{
+            align-items: flex-start;
+        }
+
+        @include desktop-only{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 3fr 1fr;
@@ -56,22 +60,22 @@
         /*animation de l'arrivée des catégories de plats (1 à 3) uniquement desktop*/
         &-1{
             @include desktop-only{
-                animation: category_movement 1s;
+                animation: category_movement 500ms;
             }
         }
         &-2{
             @include desktop-only{
-                animation: category_movement 2s;
+                animation: category_movement 1000ms;
             }
         }
         &-3{
             @include desktop-only{
-                animation: category_movement 3s;
+                animation: category_movement 1500ms;
             }
         }
     }
     &__dishes{
-        &-1,&-2,&-3{
+        &-1,&-2,&-3,&-4{
             position: relative;
             display: flex;
             justify-content: space-between;
@@ -144,23 +148,30 @@
         }
         /*animation de l'arrivée des plats (1 à 3) mobile et tablet*/
         &-1{
-            animation: dishes_movement 500ms;
+            animation: dishes_movement 400ms;
             @include desktop-only{
                 animation: none;
             }
         }
         &-2{
-            animation: dishes_movement 1000ms;
+            animation: dishes_movement 900ms;
             @include desktop-only{
                 animation: none;
             }
         }
         &-3{
+            animation: dishes_movement 1400ms;
+            @include desktop-only{
+                animation: none;
+            }
+        }
+        &-4{
             animation: dishes_movement 1500ms;
             @include desktop-only{
                 animation: none;
             }
         }
+
 
         &-choice{
             display: flex;
@@ -195,6 +206,7 @@
             grid-column: 2/2;
             min-width: 16rem;
             margin: auto;
+            font-size: 1.2rem;
         }
     }
 }

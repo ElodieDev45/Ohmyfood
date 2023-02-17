@@ -22,3 +22,8 @@
         @content;
     }
 }
+@mixin desktop-only-big{
+    @media screen and (min-width: $breakpoint-dsk-b){
+        @content;
+    }
+}

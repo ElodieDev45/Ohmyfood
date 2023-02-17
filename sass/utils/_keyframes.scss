@@ -1,12 +1,13 @@
 @keyframes progress_appearance{
     0%{
         opacity: 1;
-        transform: scaleY(1.1);
+        z-index: 1;
+    }
+    99%{
         z-index: 1;
     }
     100%{
         opacity: 0;
-        transform: scaleY(1);
         z-index: -1;
     }
 }

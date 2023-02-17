@@ -14,6 +14,9 @@
             text-align: center;
             margin-top: 0;
         }
+        @include desktop-only{
+            font-size: 2rem;
+        }
     }
     ul{
         display: flex;
@@ -42,6 +45,14 @@
 
         @include tablet-only{
             width: 30%;
+            font-size: 1.1rem;
+        }
+        @include desktop-only{
+            font-size: 1.3rem;
+            height: 4.8rem;
+        }
+        @include desktop-only-big{
+            height: 5.4rem;
         }
 
         span{
@@ -56,6 +67,18 @@
             color: white;
             font-size: 0.8rem;
             font-weight: 500;
+            
+            @include tablet-only{
+                font-size: 1.2rem;
+                width: 1.7rem;
+                height: 1.7rem;
+            }
+
+            @include desktop-only{
+                font-size: 1.4rem;
+                width: 2.2rem;
+                height: 2.2rem;
+            }
         }
 
         i{
@@ -64,12 +87,24 @@
             color: darken($color: $color-backg-sect, $amount: 50%);
             font-size: 1.15rem;
 
+            @include desktop-only{
+                font-size: 1.4rem;
+            }
+            @include desktop-only-big{
+                font-size: 1.6rem;
+            }
         }
 
         &--color{
             background-color: lighten($color: $color-primary, $amount: 35%);
             height: 4.5rem;
 
+            @include desktop-only{
+                height: 4.8rem;
+            }
+            @include desktop-only-big{
+                height: 5.4rem;
+            }
 
             i{
                 color: $color-primary;

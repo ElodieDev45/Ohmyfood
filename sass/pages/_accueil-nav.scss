@@ -49,6 +49,9 @@ nav{
             background-color: rgba(0, 0, 0, 0.4);
             color: $color-tertiary;
         }
+        @include desktop-only-big{
+            padding-left: 8rem;
+        }
         
         label{
             display: flex;
@@ -72,6 +75,7 @@ nav{
                     top: 1.6rem;
                     left: -0.4rem;
                     font-size: 1.6rem;
+                    color: darken($color-tertiary, 20);
                 }
             }
         }
@@ -91,8 +95,7 @@ nav{
                 font-size: 1.6rem;
                 font-weight: 500;
                 margin-left: 2.2rem;
-                color: $color-tertiary;
-
+                color: lighten($color-tertiary, 18);
             }
         }
     }
