@@ -57,27 +57,27 @@
 }
 @keyframes loader_spinner {
   0% {
-    transform: rotate(-1turn) translate(-10rem) scale(0.5);
+    transform: rotate(-1turn) translate(-9rem) scale(0.4);
   }
   25% {
-    transform: rotate(-0.5turn) translate(-10rem) scale(1.1);
+    transform: rotate(-0.5turn) translate(-9rem) scale(1);
   }
   50% {
-    transform: rotate(0turn) translate(-10rem) scale(1.5);
+    transform: rotate(0turn) translate(-9rem) scale(1.4);
   }
   75% {
-    transform: rotate(0.5turn) translate(-10rem) scale(0.9);
+    transform: rotate(0.5turn) translate(-9rem) scale(0.8);
   }
   100% {
-    transform: rotate(1turn) translate(-10rem) scale(0.4);
+    transform: rotate(1turn) translate(-9rem) scale(0.3);
   }
 }
 @keyframes loader_disparition {
   0% {
-    z-index: 1000;
+    opacity: 1;
   }
   99% {
-    z-index: -1000;
+    opacity: 0;
   }
   100% {
     display: none;
@@ -98,10 +98,10 @@ body {
   letter-spacing: normal;
 }
 
-.loader {
+body .loader {
   background: white;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
@@ -111,23 +111,28 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  animation: progress_appearance 3s;
+  animation: loader_disparition 6s;
+  display: none;
 }
-.loader p {
+body .loader p {
   display: flex;
+  z-index: 100;
   justify-content: center;
   align-items: center;
   font-family: "Shrikhand", cursive;
+  text-align: center;
   font-size: 2rem;
   border-radius: 50%;
   border: solid 8px #99E2D0;
   color: white;
-  width: 12rem;
-  height: 12rem;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  width: 10rem;
+  height: 10rem;
+  line-height: 85%;
+  background-image: radial-gradient(at 10% 25%, #782cd3, #fface8);
 }
-.loader .fa-utensils {
+body .loader .fa-utensils {
   position: absolute;
+  z-index: 90;
   border: solid 1px;
   font-size: 2rem;
   width: 4rem;
@@ -138,25 +143,25 @@ body {
   border-radius: 50%;
   color: white;
 }
-.loader_C1 {
+body .loader_C1 {
   background-color: #9356DC;
   animation: loader_spinner 3s linear;
   animation-delay: 0ms;
-  animation-iteration-count: 1;
+  animation-iteration-count: 3;
   animation-play-state: running;
 }
-.loader_C2 {
+body .loader_C2 {
   background-color: #FF79DA;
   animation: loader_spinner 3s linear;
-  animation-delay: 350ms;
-  animation-iteration-count: 1;
+  animation-delay: 200ms;
+  animation-iteration-count: 3;
   animation-play-state: running;
 }
-.loader_C3 {
+body .loader_C3 {
   background-color: #99E2D0;
   animation: loader_spinner 3s linear;
-  animation-delay: 700ms;
-  animation-iteration-count: 1;
+  animation-delay: 400ms;
+  animation-iteration-count: 3;
   animation-play-state: running;
 }
 
@@ -164,6 +169,7 @@ body {
   min-width: 360px;
   margin: 0 auto;
   overflow: hidden;
+  z-index: 0;
 }
 
 .header {
@@ -567,6 +573,7 @@ nav .nav__link:hover {
 
 .funct {
   padding: 1.7rem 1.3rem 4.3rem;
+  background-color: white;
 }
 @media screen and (min-width: 768px) {
   .funct {
