@@ -2,14 +2,14 @@
 @keyframes progress_appearance {
   0% {
     opacity: 1;
-    z-index: 1;
+    z-index: 1000;
   }
-  99% {
-    z-index: 1;
+  10% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
-    z-index: -1;
+    z-index: 1000;
   }
 }
 @keyframes dishes_movement {
@@ -73,15 +73,16 @@
   }
 }
 @keyframes loader_disparition {
-  4% {
+  0% {
+    z-index: 8000;
     opacity: 1;
   }
-  10% {
-    opacity: 0;
-    z-index: -1;
+  90% {
+    opacity: 1;
   }
   100% {
-    z-index: -1;
+    z-index: 8000;
+    opacity: 0;
   }
 }
 /*possibilité d'animation des "menu__dishes-choice" à la place des transitions.*/
@@ -99,10 +100,10 @@ body {
   letter-spacing: normal;
 }
 
-.container .loader {
+body .loader {
   background: white;
   position: fixed;
-  z-index: 100;
+  z-index: -8000;
   left: 0;
   top: 0;
   width: 100%;
@@ -112,27 +113,27 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  animation: loader_disparition 30s;
+  animation: loader_disparition 3s;
 }
-.container .loader p {
+body .loader p {
   display: flex;
-  z-index: 100;
+  z-index: -6000;
   justify-content: center;
   align-items: center;
   font-family: "Shrikhand", cursive;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   border-radius: 50%;
-  border: solid 8px #99E2D0;
+  border: solid 6px #99E2D0;
   color: white;
   width: 9rem;
   height: 9rem;
   line-height: 85%;
   background-image: radial-gradient(at 10% 25%, #782cd3, #fface8);
 }
-.container .loader i {
+body .loader i {
   position: absolute;
-  z-index: 90;
+  z-index: -7000;
   border: solid 1px;
   font-size: 2rem;
   width: 4rem;
@@ -145,24 +146,23 @@ body {
   animation: loader_spinner 3s linear;
   animation-iteration-count: 3;
 }
-.container .loader .loader_C1 {
+body .loader .loader_C1 {
   background-color: #9356DC;
   animation-delay: 0ms;
 }
-.container .loader .loader_C2 {
+body .loader .loader_C2 {
   background-color: #FF79DA;
-  animation-delay: 200ms;
+  animation-delay: 180ms;
 }
-.container .loader .loader_C3 {
+body .loader .loader_C3 {
   background-color: #99E2D0;
-  animation-delay: 400ms;
+  animation-delay: 360ms;
 }
 
 .container {
   min-width: 360px;
   margin: 0 auto;
   overflow: hidden;
-  z-index: 0;
 }
 
 .header {
@@ -1004,7 +1004,7 @@ nav .nav__link:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: -1000;
   opacity: 0;
   background: rgb(245, 245, 245);
   /*animation du fond à opacité dégressive complément animations catégories et plats (1 à 3)*/
@@ -1014,23 +1014,22 @@ nav .nav__link:hover {
   width: 2.5rem;
   border-bottom: solid 0.2rem #99E2D0;
   background-color: rgb(245, 245, 245);
-  border-bottom: 0.2rem solid #99E2D0;
   padding: 0.3rem 0 0.4rem;
   margin-bottom: 0.7rem;
 }
 @media screen and (min-width: 1024px) {
   .menu__category-1 {
-    animation: category_movement 500ms;
+    animation: category_movement 0ms;
   }
 }
 @media screen and (min-width: 1024px) {
   .menu__category-2 {
-    animation: category_movement 1000ms;
+    animation: category_movement 800ms;
   }
 }
 @media screen and (min-width: 1024px) {
   .menu__category-3 {
-    animation: category_movement 1500ms;
+    animation: category_movement 1600ms;
   }
 }
 .menu__dishes {
@@ -1110,7 +1109,7 @@ nav .nav__link:hover {
   transition: transform 0.4s ease-in-out;
 }
 .menu__dishes-1 {
-  animation: dishes_movement 400ms;
+  animation: dishes_movement 0ms;
 }
 @media screen and (min-width: 1024px) {
   .menu__dishes-1 {
@@ -1118,7 +1117,7 @@ nav .nav__link:hover {
   }
 }
 .menu__dishes-2 {
-  animation: dishes_movement 900ms;
+  animation: dishes_movement 700ms;
 }
 @media screen and (min-width: 1024px) {
   .menu__dishes-2 {
