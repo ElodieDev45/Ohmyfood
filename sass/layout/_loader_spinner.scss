@@ -1,8 +1,8 @@
-.container{
+body{
     .loader{
         background: white;
         position: fixed;
-        z-index: 100;
+        z-index: -8000;
         left: 0;
         top: 0;
         width: 100%;
@@ -13,19 +13,19 @@
         align-items: center;
         gap: 1rem;
         
-        animation: loader_disparition 30s;
+        animation: loader_disparition 3s;
 
         // display: none;
    
         p{
             display: flex;
-            z-index: 100;
+            z-index: -6000;
             @include flex-totaly-center;
             @include titles;
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.6rem;
             border-radius: 50%;
-            border: solid 8px $color-tertiary;
+            border: solid 6px $color-tertiary;
             color: white;
             width: 9rem;
             height: 9rem;
@@ -35,7 +35,7 @@
     
         i{
             position: absolute;
-            z-index: 90;
+            z-index: -7000;
             border: solid 1px;
             font-size: 2rem;
             width: 4rem;
@@ -55,11 +55,11 @@
         }
         .loader_C2{
             background-color: $color-secondary;
-            animation-delay: 200ms;
+            animation-delay: 180ms;
         }
         .loader_C3{
             background-color: $color-tertiary;
-            animation-delay: 400ms;
+            animation-delay: 360ms;
         }
     }
 } 

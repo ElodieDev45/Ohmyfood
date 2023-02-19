@@ -41,7 +41,7 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
-                z-index: -1;
+                z-index: -1000;
                 opacity: 0;
                 background: $color-backg-sect;
                 /*animation du fond à opacité dégressive complément animations catégories et plats (1 à 3)*/
@@ -50,9 +50,8 @@
 
             legend{
                 width: 2.5rem;
-                border-bottom:solid .2rem $color-tertiary;
+                border-bottom: solid .2rem $color-tertiary;
                 background-color: $color-backg-sect;
-                border-bottom: .2rem solid #99E2D0;
                 padding: .3rem 0 .4rem;
                 margin-bottom: 0.7rem;
             }
@@ -60,17 +59,17 @@
         /*animation de l'arrivée des catégories de plats (1 à 3) uniquement desktop*/
         &-1{
             @include desktop-only{
-                animation: category_movement 500ms;
+                animation: category_movement 000ms;
             }
         }
         &-2{
             @include desktop-only{
-                animation: category_movement 1000ms;
+                animation: category_movement 800ms;
             }
         }
         &-3{
             @include desktop-only{
-                animation: category_movement 1500ms;
+                animation: category_movement 1600ms;
             }
         }
     }
@@ -148,13 +147,13 @@
         }
         /*animation de l'arrivée des plats (1 à 3) mobile et tablet*/
         &-1{
-            animation: dishes_movement 400ms;
+            animation: dishes_movement 000ms;
             @include desktop-only{
                 animation: none;
             }
         }
         &-2{
-            animation: dishes_movement 900ms;
+            animation: dishes_movement 700ms;
             @include desktop-only{
                 animation: none;
             }
