@@ -1039,7 +1039,7 @@ nav .nav__link:hover {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 120%;
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 0.3rem 0.7rem rgb(225, 225, 225);
@@ -1099,14 +1099,13 @@ nav .nav__link:hover {
     font-size: 1.1rem;
   }
 }
-.menu__dishes-1 label:hover + .menu__dishes-choice, .menu__dishes-2 label:hover + .menu__dishes-choice, .menu__dishes-3 label:hover + .menu__dishes-choice, .menu__dishes-4 label:hover + .menu__dishes-choice {
-  transition: width 0.4s linear;
-  width: 20%;
-  justify-content: center;
+.menu__dishes-1:hover, .menu__dishes-2:hover, .menu__dishes-3:hover, .menu__dishes-4:hover {
+  transition: width 250ms linear;
+  width: 100%;
 }
-.menu__dishes-1 label:hover + .menu__dishes-choice i, .menu__dishes-2 label:hover + .menu__dishes-choice i, .menu__dishes-3 label:hover + .menu__dishes-choice i, .menu__dishes-4 label:hover + .menu__dishes-choice i {
+.menu__dishes-1:hover i, .menu__dishes-2:hover i, .menu__dishes-3:hover i, .menu__dishes-4:hover i {
   transform: rotate(1turn);
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .menu__dishes-1 {
   animation: dishes_movement 0ms;
@@ -1142,9 +1141,9 @@ nav .nav__link:hover {
 }
 .menu__dishes-choice {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  width: 0%;
+  width: 20%;
   background-color: #99E2D0;
 }
 .menu__dishes-choice i {

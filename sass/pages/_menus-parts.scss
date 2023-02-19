@@ -78,7 +78,7 @@
             position: relative;
             display: flex;
             justify-content: space-between;
-            width: 100%;
+            width: 120%;
             background-color: white;
             border-radius: 0.5rem;
             @include shadow-frame;
@@ -134,15 +134,14 @@
                         font-size: 1.1rem;
                     }
                 }
-                &:hover + .menu__dishes-choice{
-                    transition: width 0.4s linear;
-                    width: 20%;
-                    justify-content: center;
-                }
-                &:hover + .menu__dishes-choice i{
-                    transform: rotate(1turn);
-                    transition: transform 0.4s ease-in-out;
-                }
+            }
+            &:hover{
+                transition: width 250ms linear;
+                width: 100%;
+            }
+            &:hover i{
+                transform: rotate(1turn);
+                transition: transform 0.5s ease-in-out;
             }
         }
         /*animation de l'arrivée des plats (1 à 3) mobile et tablet*/
@@ -174,9 +173,9 @@
 
         &-choice{
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-            width: 0%;
+            width: 20%;
             background-color: $color-tertiary;
 
             i{
