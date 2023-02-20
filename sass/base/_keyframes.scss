@@ -32,30 +32,6 @@
     }
 }
 
-@keyframes spinner_vertical{
-    0%{
-        transform: rotate(0turn);
-        top: 0rem;
-        transform: scale(50%);
-    }
-    33%{
-        transform: rotate(0.5turn);
-        top: +6rem;
-    }
-    50%{
-        transform: scale(150%);
-    }
-    66%{
-        transform: rotate(1.5turn);
-        top: -6rem;
-    }
-    100%{
-        transform: rotate(2turn);
-        top: 0rem;
-        transform: scale(50%);
-    }
-}
-
 @keyframes loader_spinner{
     0%{
         transform: rotate(-1turn) translate(8rem) scale(0);
