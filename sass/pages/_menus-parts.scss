@@ -136,12 +136,12 @@
             }
             &:hover > .menu__dishes-choice{
                 width: 20%;
-                transition: width 300ms ease-in-out;
+                transition: width 500ms ease-in-out;
                 justify-content: center;
             }
             &:hover i{
                 transform: rotate(1turn);
-                transition: transform 0.6s;
+                transition: transform 650ms;
             }
         }
         /*animation de l'arrivée des plats (1 à 3) mobile et tablet*/

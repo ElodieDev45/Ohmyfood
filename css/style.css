@@ -821,6 +821,7 @@ nav .nav__link:hover {
 .rest__frame-fav .heart-1:link, .rest__frame-fav .heart-1:visited, .rest__frame-fav .heart-1:hover, .rest__frame-fav .heart-1:active {
   opacity: 0;
   transition: opacity 1.5s;
+  cursor: pointer;
 }
 .rest__frame-fav .heart-2 {
   position: absolute;
@@ -838,6 +839,7 @@ nav .nav__link:hover {
 .rest__frame-fav .heart-2:link, .rest__frame-fav .heart-2:visited, .rest__frame-fav .heart-2:hover, .rest__frame-fav .heart-2:active {
   opacity: 1;
   transition: opacity 1.5s;
+  cursor: pointer;
 }
 
 .sign {
@@ -926,6 +928,7 @@ nav .nav__link:hover {
 .sign__titles-fav .heart-1:link, .sign__titles-fav .heart-1:visited, .sign__titles-fav .heart-1:hover, .sign__titles-fav .heart-1:active {
   opacity: 0;
   transition: opacity 1.5s;
+  cursor: pointer;
 }
 .sign__titles-fav .heart-2 {
   position: absolute;
@@ -943,6 +946,7 @@ nav .nav__link:hover {
 .sign__titles-fav .heart-2:link, .sign__titles-fav .heart-2:visited, .sign__titles-fav .heart-2:hover, .sign__titles-fav .heart-2:active {
   opacity: 1;
   transition: opacity 1.5s;
+  cursor: pointer;
 }
 
 .menu {
@@ -1089,12 +1093,12 @@ nav .nav__link:hover {
 }
 .menu__dishes-1:hover > .menu__dishes-choice, .menu__dishes-2:hover > .menu__dishes-choice, .menu__dishes-3:hover > .menu__dishes-choice, .menu__dishes-4:hover > .menu__dishes-choice {
   width: 20%;
-  transition: width 300ms ease-in-out;
+  transition: width 500ms ease-in-out;
   justify-content: center;
 }
 .menu__dishes-1:hover i, .menu__dishes-2:hover i, .menu__dishes-3:hover i, .menu__dishes-4:hover i {
   transform: rotate(1turn);
-  transition: transform 0.6s;
+  transition: transform 650ms;
 }
 .menu__dishes-1 {
   animation: dishes_movement 0ms;

@@ -35,7 +35,8 @@
             -webkit-text-stroke-color: black;
             &:link, &:visited, &:hover, &:active{
                 opacity: 0;
-                transition: opacity 1.5s
+                transition: opacity 1.5s;
+                cursor: pointer;
             }
         }
         
@@ -54,6 +55,7 @@
             &:link, &:visited, &:hover, &:active{
                 opacity: 1;
                 transition: opacity 1.5s;
+                cursor: pointer;
             }
         }
 
