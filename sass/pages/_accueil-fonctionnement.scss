@@ -102,7 +102,7 @@
             }
         }
 
-        &--color{
+        &:hover, &:active /*ou &--color pour laisser la couleur fixe sur "dégustez au restaurant"*/{
             background-color: lighten($color: $color-primary, $amount: 35%);
             height: 4.5rem;
 
