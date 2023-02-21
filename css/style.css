@@ -795,7 +795,7 @@ nav .nav__link:hover {
   -webkit-text-stroke-width: 0.06rem;
   -webkit-text-stroke-color: black;
 }
-.rest__frame-fav .heart-1:link, .rest__frame-fav .heart-1:visited, .rest__frame-fav .heart-1:hover, .rest__frame-fav .heart-1:active {
+.rest__frame-fav .heart-1:hover, .rest__frame-fav .heart-1:active {
   opacity: 0;
   transition: opacity 1.5s;
   cursor: pointer;
@@ -813,7 +813,7 @@ nav .nav__link:hover {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: transparent;
 }
-.rest__frame-fav .heart-2:link, .rest__frame-fav .heart-2:visited, .rest__frame-fav .heart-2:hover, .rest__frame-fav .heart-2:active {
+.rest__frame-fav .heart-2:hover, .rest__frame-fav .heart-2:active {
   opacity: 1;
   transition: opacity 1.5s;
   cursor: pointer;
@@ -902,7 +902,7 @@ nav .nav__link:hover {
   -webkit-text-stroke-width: 0.06rem;
   -webkit-text-stroke-color: black;
 }
-.sign__titles-fav .heart-1:link, .sign__titles-fav .heart-1:visited, .sign__titles-fav .heart-1:hover, .sign__titles-fav .heart-1:active {
+.sign__titles-fav .heart-1:hover, .sign__titles-fav .heart-1:active {
   opacity: 0;
   transition: opacity 1.5s;
   cursor: pointer;
@@ -920,7 +920,7 @@ nav .nav__link:hover {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: transparent;
 }
-.sign__titles-fav .heart-2:link, .sign__titles-fav .heart-2:visited, .sign__titles-fav .heart-2:hover, .sign__titles-fav .heart-2:active {
+.sign__titles-fav .heart-2:hover, .sign__titles-fav .heart-2:active {
   opacity: 1;
   transition: opacity 1.5s;
   cursor: pointer;
