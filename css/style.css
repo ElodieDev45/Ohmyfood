@@ -145,13 +145,13 @@ body .loader .loader_C3 {
   display: flex;
   align-items: center;
   width: 100%;
+  background-color: white;
 }
 .header__logo {
   position: relative;
   width: 44%;
   margin: 0 auto;
   padding: 1.4rem 0 0.5rem;
-  background-color: white;
 }
 .header__logo img {
   width: 100%;

@@ -2,13 +2,13 @@
     display: flex;
     align-items: center;
     width: 100%;
+    background-color: white;
 
     &__logo{
         position: relative;
         width: 44%;
         margin: 0 auto;
         padding: 1.4rem 0 0.5rem;
-        background-color: white;
         
         img{
             width: 100%;
